@@ -3,6 +3,12 @@
     src: url("Fonts/Avenir.ttc");
 }
 
+@font-face {
+    font-family: "fontTimer";
+    /* src: url("Fonts/Montserrat-ExtraLight.ttf"); */
+    src: url("Fonts/Montserrat-Bold.ttf");
+}
+
 html, body {
     font-family: "mainFont";
     height: 100%;
@@ -12,15 +18,20 @@ html, body {
 
 /* POLICES */
 h1 {
-    font-size: 2.1em;
+    font-size: 2.5em;
     font-weight: 100;
     letter-spacing: 2px;
 }
 
 h2 {
-    /*font-weight: 100;
-    font-size: 17px;
-    /*padding-bottom: 0.5em;*/
+    font-size: 2em;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+h3 {
+    font-size: 1.33em;
+    letter-spacing: 1px;
 }
 
 p {
@@ -95,11 +106,101 @@ p {
 /* MAIN CONTENT */
 #main-content {
     margin: 0;
-    background-color: #ECECEC; /* ECECEC */
+    background-color: #060301;
 }
 
 .bloc-content {
-    padding: 7% 0;
+    margin: 5% 0 5% 0;
+    padding: 3% 0 3% 180px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.bloc-content-center {
+    justify-content: center;
+}
+
+.bloc-content-timer {
+    margin: 5% 0 5% 0;
+    padding: 5% 0 5% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    outline: 2px solid #8D8E72;
+
+    background-image: linear-gradient(90deg, rgba(0,0,0,0.5) 55%, rgba(0,0,0,0.3) 100%),
+    url("./pictures/weapon.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bloc-content-title {
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.card-concept {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    max-width: 400px;
+    margin: 0.5em 0.5em;
+    padding: 1em 2em;
+
+}
+
+.card-concept-title {
+    display: flex;
+    flex-direction: row;
+}
+
+.card-concept-title h3 {
+    margin: 15px 0 0 0;
+    padding: 0 0 0 0.5em;
+    color: #8D8E72;
+}
+
+.card-concept-number {
+    position: relative;
+    font-size: 2.65em;
+    font-weight: bold;
+    color: white;
+    left: -20px;
+    top: 20px;
+    z-index: 51;
+}
+
+.card-concept-text {
+    padding: 15px 0 0 25px;
+    color: white;
+}
+
+.config-box-img {
+    margin: 0 2%;
+    width: 600px;
+}
+
+.config-box-img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.config-box-form {
+    margin: 0 2%;
+    background-color: #E3E3DC; /* #B3B49A */
+    box-shadow: 6px 6px 22px 2px rgba(179,180,154,0.36);
+    -webkit-box-shadow: 6px 6px 22px 2px rgba(179,180,154,0.36);
+    -moz-box-shadow: 6px 6px 22px 2px rgba(179,180,154,0.36);
+    width: 525px;
+    height: 450px;
+    border-radius: 10px;
 }
 
 .sous-text {
@@ -116,15 +217,15 @@ p {
 
 /* USP */
 .usp{
+    height: 100%;
     min-height: 100vh;
     display: flex;
     padding-left: 180px;
     flex-direction: row;
     align-items: center;
 
-    /*background-image: linear-gradient(0deg, rgba(255,255,255,0.1) 100%, rgba(255,255,255,0.1) 100%),*/
-    /*background-image: linear-gradient(0deg, rgba(0,0,0,0.3) 100%, rgba(0,0,0,0.3) 100%),*/
-    background-image: linear-gradient(90deg, rgba(0,0,0,0.5) 55%, rgba(0,0,0,0.3) 100%),
+    /* linear-gradient(90deg, rgba(0,0,0,0.5) 55%, rgba(0,0,0,0.3) 100%) */
+    background-image: linear-gradient(186deg, rgba(0,0,0,0) 0%, rgba(6,3,1,1) 100%),
             url("./pictures/forest.png");
     background-position: center;
     background-repeat: no-repeat;
@@ -149,13 +250,14 @@ p {
 
 .partie-gauche {
     max-width: 525px;
-    margin: 0 0 0 50px; /* 0 0 0 50px */
+    margin: 0 45px 0 50px; /* 0 0 0 50px */
     color: white;
     z-index: 1;
 }
 
 .partie-droite {
-
+    max-width: 525px;
+    color: white;
 }
 
 /* BUTTONS */
@@ -231,12 +333,19 @@ p {
 }
 
 .custom-icon{
-    width: 47px;
-    height: 47px;
+    width: 55px;
+    height: 55px;
 }
 
 .titre-icon{
     font-size: 1em;
+}
+
+/* VIDEO */
+#background-video {
+    max-width: 100%;
+    border-radius: 10px;
+
 }
 
 /* OTHERS */
@@ -250,4 +359,10 @@ p {
     border-left: 3px solid #7B7C64;
     padding-left: 15px;
     margin-left: -15px;
+}
+
+#countdown-next-month {
+    font-family: "fontTimer";
+    font-size: 4em;
+    letter-spacing: 5px;
 }
