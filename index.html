@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="./styles.css">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles_structure.css">
+    <link rel="stylesheet" href="styles/styles_content.css">
+    <link rel="stylesheet" href="styles/styles_other.css">
+    <link rel="stylesheet" href="styles/styles_config_box_form.css">
+
+    <!-- ANIMATE.CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <!-- Icons by Flaticon.com ! Thanks to them ! -->
 
@@ -14,7 +18,7 @@
 </head>
 <body>
 
-<a href=""><img src="pictures/LOGO+COLISSTRATÉGIQUE.png" alt="Logo Colis Stratégique" id="logo"></a>
+<a href=""><img src="pictures/logos/LOGO+COLISSTRATÉGIQUE.png" alt="Logo Colis Stratégique" id="logo"></a>
 <div id="navbar-main">
     <ul>
         <li class="navbar-n1 navbar-n1-current">ACCUEIL</li>
@@ -35,59 +39,33 @@
     </ul>
 </div>
 <div id="socials-network">
-    <a href=""><img src="./pictures/instagram.png" alt="Icon Instagramm" class="social-network"></a>
-    <a href=""><img src="./pictures/facebook.png" alt="Icon Facebook" class="social-network"></a>
+    <a href=""><img src="pictures/logos/instagram.png" alt="Icon Instagramm" class="social-network"></a>
+    <a href=""><img src="pictures/logos/facebook.png" alt="Icon Facebook" class="social-network"></a>
 </div>
 <div id="main-content">
 
     <!-- PARTIE 1 - USP -->
     <div class="usp">
-        <div id="blur-usp">
+        <div id="usp-blur">
             <div class="partie-gauche">
                 <h1>VOTRE BOX D'AIRSOFT</h1>
 
-                <!--<p class="text-border-left">Colis Stratégique c’est la livraison d’une box pour faire le
-                    plein en <b>consommables</b> adaptés à vos besoins et en <b>accessoires</b> judicieusement
-                    sélectionnés par notre équipe.</p>-->
-
                 <p class="text-border-left">Colis Stratégique vous permet de faire le plein en
-                    <b>consommables</b> grâce à sa box adaptée à vos besoins, avec des <b>accessoires</b>
-                    judicieusement sélectionnés par notre équipe.</p>
+                    <b>consommables</b> grâce à sa box adaptée à vos besoins. <br>
+                    Mais également d'améliorer l'expérience de vos parties
+                    au moyen d'<b>accessoires</b> judicieusement sélectionnés par notre équipe.</p>
 
                 <p>Vous pouvez choisir de commander <b>une seule box</b>, ou de <b>vous abonner</b> pour en recevoir
                     une tous les mois. <br>
                     L’abonnement c’est aussi <b>sans engagement</b> et <b>résiliable en un clic</b> !</p>
 
-                <div class="bloc-text-center">
+                <div>ICON + ICON + ICON = LOGO</div>
+
+                <div class="bloc-content-center">
                     <!-- grossir btn, revoir couleurs, rapprocher du texte -->
                     <a class="custom-button-primary">ACQUÉRIR SA BOX</a>
                 </div>
-
-                <div class="list-icon">
-                    <div class="icon-card">
-                        <img src="./pictures/truck-full.png" alt="icon livraison offerte" class="custom-icon">
-                        <p class="titre-icon">LIVRAISON *<br>OFFERTE &nbsp</p>
-                    </div>
-                    <div class="icon-card">
-                        <img src="./pictures/unlock-full.png" alt="icon sans engagement" class="custom-icon">
-                        <p class="titre-icon">SANS<br>ENGAGEMENT</p>
-                    </div>
-                    <div class="icon-card">
-                        <img src="./pictures/security-full.png" alt="icon paiement securise" class="custom-icon">
-                        <p class="titre-icon">PAIEMENT<br>SÉCURISÉ</p>
-                    </div>
-                    <div class="icon-card">
-                        <img src="./pictures/headset-full.png" alt="icon support a votre ecoute" class="custom-icon">
-                        <p class="titre-icon">SUPPORT<br>À VOTRE ÉCOUTE </p>
-                    </div>
-                </div>
             </div>
-        </div>
-
-
-
-        <div class="partie-droite">
-            <!-- VIDE -->
         </div>
     </div>
 
@@ -97,7 +75,7 @@
         <div class="card-concept">
             <div class="card-concept-title">
                 <div class="card-concept-number">1</div>
-                <img src="./pictures/settings.png" alt="icon livraison offerte" class="custom-icon">
+                <img src="pictures/icons/settings.png" alt="icon livraison offerte" class="custom-icon">
                 <h3>Configurez</h3>
             </div>
             <div class="card-concept-text">Partagez nous votre camouflage et vos besoins en consommables en deux temps trois mouvements.</div>
@@ -105,7 +83,7 @@
         <div class="card-concept">
             <div class="card-concept-title">
                 <div class="card-concept-number">2</div>
-                <img src="./pictures/box.png" alt="icon livraison offerte" class="custom-icon">
+                <img src="pictures/icons/box.png" alt="icon livraison offerte" class="custom-icon">
                 <h3>Commandez</h3>
             </div>
             <div class="card-concept-text">Commandez votre box <b>ou</b> souscrivez à votre abonnement.</div>
@@ -113,7 +91,7 @@
         <div class="card-concept">
             <div class="card-concept-title">
                 <div class="card-concept-number">3</div>
-                <img src="./pictures/backpack.png" alt="icon livraison offerte" class="custom-icon">
+                <img src="pictures/icons/backpack.png" alt="icon livraison offerte" class="custom-icon">
                 <h3>Rejoignez l'aventure</h3>
             </div>
             <div class="card-concept-text">Recevez votre box en fin de mois et passez au niveau supérieur sur le terrain.</div>
@@ -131,7 +109,7 @@
                 Nos équipements proposés sont le fruit de négociations et collaborations avec les
                 marques et fournisseurs. <br>
                 Ils sont également sélectionnés en fonction des tendances et des besoins des saisons actuelles.</p>
-            <div class="bloc-text-center">
+            <div class="bloc-content-center">
                 <!-- grossir btn, revoir couleurs, rapprocher du texte -->
                 <a class="custom-button-primary">ACQUÉRIR SA BOX</a>
             </div>
@@ -150,34 +128,316 @@
     </div>
 
     <!-- PARTIE 5 - PERSONNALISATION BOX -->
-    <div class="bloc-content bloc-content-center">
-        <div class="config-box-img">
-            <img src="./pictures/forest.png" alt="Image visualisation de la personnalisation de votre box">
-        </div>
-        <div class="config-box-form">
-            COLIS STRATÉGIQUE <br>
-            Box d'airsoft <br>
-            Description <br>
-            - <br>
-            Personnaliser en fonction de vos besoins : <br>
-            => Consommable principale (billes, gaz, co2) <br>
-                selection détail consommable <br>
-            => Camouflage <br>
-                selection camo <br>
-            => Consommable optionnel (billes, gaz, co2)* <br>
-                selection detail consommable optionnel <br>
-            - <br>
-            Total TTC <br>
-            - <br>
-            "ACQUÉRIR SA BOX" / "S'ABONNER (?)" <br>
+    <div class="bloc-content config-box-content">
 
+        <div class="config-box-partie-gauche">
+            <img src="./pictures/table-airsoft.png" alt="Visu box" class="picture-base">
+            <img src="./pictures/table-airsoft-calc.png" alt="Visu box" class="picture-superieure">
+        </div>
+
+        <div class="config-box-partie-droite">
+            <h2>COLIS STRATÉGIQUE</h2>
+
+            <div id="text-prix-box-form" class="text-prix">35,99 €</div>
+
+            <!-- CONSO PRINCIPAL -->
+            <div class="config-box-produit-content">
+                <p><b>Consommable principal</b></p>
+                <div class="list-icon-form">
+                    <div onclick="displayBilles()" class="icon-form">
+                        <img src="pictures/icons/plastic-bag-black.png" alt="icon sachet de billes">
+                        <p>BBs</p>
+                    </div>
+                    <div onclick="displayGas()" class="icon-form">
+                        <img src="pictures/icons/gas-bottle-black.png" alt="icon bouteille gaz">
+                        <p>GAZ</p>
+                    </div>
+                    <div onclick="displayCo2()" class="icon-form">
+                        <img src="pictures/icons/gas-bottle-black.png" alt="icon capsules co2">
+                        <p>CO2</p>
+                    </div>
+                </div>
+
+                <!-- DETAILS BILLES -->
+                <div id="config-box-details-billes" class="config-box-details-active">
+                    <div class="list-icon-form">
+                        <div class="icon-form config-box-details-billes-elem">
+                            <p>0,20g</p>
+                        </div>
+                        <div class="icon-form config-box-details-billes-elem">
+                            <p>0,25g</p>
+                        </div>
+                        <div class="icon-form config-box-details-billes-elem">
+                            <p>0,28g</p>
+                        </div>
+                        <div class="icon-form config-box-details-billes-elem">
+                            <p>0,32g</p>
+                        </div>
+                    </div>
+                    <!-- PAGE D'AIDE -->
+                    <a href="" class="link config-box-details-billes">Que choisir ?</a>
+                </div>
+
+                <!-- DETAILS GAZ -->
+                <div id="config-box-details-gaz">
+                    <div class="list-icon-form">
+                        <a href="" class="link-icon-form">
+                            <div class="icon-form">
+                                <p>130 PSI sec</p>
+                            </div>
+                        </a>
+                        <a href="" class="link-icon-form">
+                            <div class="icon-form">
+                                <p>130 PSI lubrifié</p>
+                            </div>
+                        </a>
+                        <a href="" class="link-icon-form">
+                            <div class="icon-form">
+                                <p>150 PSI sec</p>
+                            </div>
+                        </a>
+                        <a href="" class="link-icon-form">
+                            <div class="icon-form">
+                                <p>150 PSI lubrifié</p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- PAGE D'AIDE -->
+                    <a href="" class="link">Que choisir ?</a>
+                </div>
+
+                <!-- DETAILS CO2 -->
+                <div id="config-box-details-co2">
+                    <div class="list-icon-form">
+                        <a href="" class="link-icon-form">
+                            <div class="icon-form">
+                                <p>&nbsp5 capsules</p>
+                            </div>
+                        </a>
+                        <a href="" class="link-icon-form">
+                            <div class="icon-form">
+                                <p>10 capsules</p>
+                            </div>
+                        </a>
+                        <a href="" class="link-icon-form">
+                            <div class="icon-form">
+                                <p>15 capsules</p>
+                            </div>
+                        </a>
+                        <a href="" class="link-icon-form">
+                            <div class="icon-form">
+                                <p>20 capsules</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- AJOUT CONSOMMABLE -->
+                <p id="button-add-consommable" onclick="addConsommableBoxForm()" class="link-js">
+                    <img src="./pictures/plus.png" alt="icon ajouter un consommable" class="icon-text">
+                    Ajouter un consommable (optionnel)
+                </p>
+            </div>
+
+            <!-- CONSO SUPPLEMENTAIRE -->
+            <div id="config-box-conso-supplementaire" class="config-box-produit-content">
+                <p><b>Consommable supplémentaire</b></p>
+                <div class="list-icon-form">
+                    <a href="" class="link-icon-form">
+                        <div class="icon-form">
+                            <img src="pictures/icons/plastic-bag-black.png" alt="icon sachet de billes">
+                            <p>BBs</p>
+                        </div>
+                    </a>
+                    <a href="" class="link-icon-form">
+                        <div class="icon-form">
+                            <img src="pictures/icons/gas-bottle-black.png" alt="icon bouteille gaz">
+                            <p>GAZ</p>
+                        </div>
+                    </a>
+                    <a href="" class="link-icon-form">
+                        <div class="icon-form">
+                            <img src="pictures/icons/gas-bottle-black.png" alt="icon capsules co2">
+                            <p>CO2</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- DETAILS BILLES -->
+                <div id="config-box-details-billes-option">
+                    <div class="list-icon-form">
+                        <a href="" class="link-icon-form">
+                            <div class="icon-form">
+                                <p>0,20g</p>
+                            </div>
+                        </a>
+                        <a href="" class="link-icon-form">
+                            <div class="icon-form">
+                                <p>0,25g</p>
+                            </div>
+                        </a>
+                        <a href="" class="link-icon-form">
+                            <div class="icon-form">
+                                <p>0,28g</p>
+                            </div>
+                        </a>
+                        <a href="" class="link-icon-form">
+                            <div class="icon-form">
+                                <p>0,32g</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- DETAILS GAZ -->
+                <div id="config-box-details-gaz-option">
+                    <div class="list-icon-form">
+                        <a href="" class="link-icon-form">
+                            <div class="icon-form">
+                                <p>130 PIS sec</p>
+                            </div>
+                        </a>
+                        <a href="" class="link-icon-form">
+                            <div class="icon-form">
+                                <p>130 PSI lubrifié</p>
+                            </div>
+                        </a>
+                        <a href="" class="link-icon-form">
+                            <div class="icon-form">
+                                <p>150 PIS sec</p>
+                            </div>
+                        </a>
+                        <a href="" class="link-icon-form">
+                            <div class="icon-form">
+                                <p>150 PSI lubrifié</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- DETAILS CO2 -->
+                <div id="config-box-details-co2-option">
+                    <div class="list-icon-form">
+                        <a href="" class="link-icon-form">
+                            <div class="icon-form">
+                                <p>&nbsp5 capsules</p>
+                            </div>
+                        </a>
+                        <a href="" class="link-icon-form">
+                            <div class="icon-form">
+                                <p>10 capsules</p>
+                            </div>
+                        </a>
+                        <a href="" class="link-icon-form">
+                            <div class="icon-form">
+                                <p>15 capsules</p>
+                            </div>
+                        </a>
+                        <a href="" class="link-icon-form">
+                            <div class="icon-form">
+                                <p>20 capsules</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="inclued-product" name="inclued-product">
+                    <label for="inclued-product">Inclure ce consommable dans chaque box <br>(applicable pour l'abonnement)</label>
+                </div>
+
+                <p id="button-delete-consommable" onclick="deleteConsommableBoxForm()" class="link-js">
+                    <img src="./pictures/minus.png" alt="icon supprimer un consommable" class="icon-text">
+                    Supprimer ce consommable
+                </p>
+            </div>
+
+            <!-- CAMO -->
+            <div class="config-box-produit-content">
+                <p><b>Camouflage de préférence</b></p>
+                <!-- => Camouflage <br>
+                    selection camo <br>
+                #131615 black <br>
+                #6c6641 green <br>
+                camo CE <br>
+                US ARMY <br>
+                Russian ARMY <br> -->
+                <div class="list-icon-form">
+                    <a href="" class="link-icon-form">
+                        <div class="icon-form-camo camo-black">
+                        </div>
+                    </a>
+                    <a href="" class="link-icon-form">
+                        <div class="icon-form-camo camo-green">
+                        </div>
+                    </a>
+                    <a href="" class="link-icon-form">
+                        <div class="icon-form-camo">
+                            <img src="./pictures/camo-ce.jpg" alt="camouflage CE">
+                        </div>
+                    </a>
+                    <a href="" class="link-icon-form">
+                        <div class="icon-form-camo">
+                            <img src="./pictures/camo-usa-army.jpg" alt="camouflage usa">
+                        </div>
+                    </a>
+                    <a href="" class="link-icon-form">
+                        <div class="icon-form-camo">
+                            <img src="./pictures/camo-russian-army.jpg" alt="camouflage russian">
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- BUTTON ACHETER -->
+            <div class="bloc-button">
+                <!-- grossir btn, revoir couleurs, rapprocher du texte -->
+                <a class="custom-button-primary">ACQUÉRIR SA BOX</a>
+            </div>
+
+            <!-- ICONS DE GARANTIE -->
+            <div class="list-icon">
+                <div class="icon-card">
+                    <img src="pictures/icons/truck-black.png" alt="icon livraison offerte" class="custom-icon">
+                    <p class="titre-icon">LIVRAISON *<br>OFFERTE &nbsp</p>
+                </div>
+                <div class="icon-card">
+                    <img src="pictures/icons/unlock-black.png" alt="icon sans engagement" class="custom-icon">
+                    <p class="titre-icon">SANS<br>ENGAGEMENT</p>
+                </div>
+                <div class="icon-card">
+                    <img src="pictures/icons/security-black.png" alt="icon paiement securise" class="custom-icon">
+                    <p class="titre-icon">PAIEMENT<br>SÉCURISÉ</p>
+                </div>
+                <div class="icon-card">
+                    <img src="pictures/icons/headset-black.png" alt="icon support a votre ecoute" class="custom-icon">
+                    <p class="titre-icon">SUPPORT<br>À VOTRE ÉCOUTE </p>
+                </div>
+            </div>
+
+            <div class="bloc-text-center" style="font-size: 0.75em">
+                * Livraison offerte pour votre première box, c'est l'occasion de se lancer !
+            </div>
+
+        </div>
+    </div>
+
+    <!-- PARTIE 6 - DETAILS OFFRE BOX -->
+    <div class="bloc-content">
+        <div class="partie-gauche">
+            Colis Stratégique, c'est la livraison d'une box mensuelle composée d'un consommable de
+            votre choix qui répond à votre besoin. <br><br>
+            Avec ceci vous trouverez un ou plusieurs accessoire(s) judicieusement sélectionné(s) par notre équipe pour
+            chaque box et en fonction des saisons. <br>
+            Ils ont pour but d'améliorer l'expérience du plus grand nombre. <br>
+            La box est destinée à tout type de terrain sans pour autant répondre à un style de jeu particulier.
+            Que vous ayez un jeu agressif ou que vous soyez un sniper dans l'âme, notre box saura vous compléter.
         </div>
     </div>
 
 </div>
 
     <!-- JAVASCRIPT -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="./script.js"></script>
 </body>
 </html>

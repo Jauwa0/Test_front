@@ -1,0 +1,139 @@
+/* BUTTONS */
+.bloc-button {
+    padding: 0.5em 0 2.5em 0;
+    text-align: center;
+}
+
+.custom-button-primary {
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #8D8E72;
+    color: white;
+    /*border: solid 1px #585947;*/
+    border-radius: 3px;
+    margin: 0 1em;
+    padding: 0.6em 1em;
+}
+
+.custom-button-primary:hover {
+    box-shadow: 0 0 18px -2px rgba(71,71,57,0.74);
+}
+
+/*.custom-button-primary:active {
+    background-color: white;
+    color: #8D8E72;
+    border: solid 1px #8D8E72;
+    box-shadow: none;
+}*/
+
+.custom-button-secondary {
+    text-decoration: none;
+    text-transform: uppercase;
+    /*background-color: #8D8E72;*/
+    color: #8D8E72;
+    border: solid 1px #8D8E72;
+    border-radius: 3px;
+    margin: 5px 5px 5px 5px;
+    padding: 0.6em 1.7em;
+}
+
+.custom-button-secondary:hover {
+    background-color: #E3E3DC;
+}
+
+.custom-button-secondary:active {
+    background-color: #D4D5CA;
+}
+
+.custom-button-tertiary {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #8D8E72;
+    border-radius: 3px;
+    margin: 5px 5px 5px 5px;
+    padding: 0.6em 1.7em;
+}
+
+.custom-button-tertiary:hover {
+    background-color: #E3E3DC;
+}
+
+.custom-button-tertiary:active {
+    background-color: #D4D5CA;
+}
+
+/* ICONS */
+.list-icon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 0 5% 0;
+}
+
+.icon-card {
+    text-align: center;
+    padding: 2% 2%; /* 0 1em */
+}
+
+.custom-icon{
+    width: 40px;
+    height: 40px;
+}
+
+.titre-icon{
+    font-size: 0.75em;
+}
+
+.icon-text {
+    height: 1em;
+    margin: 0 0.2em -0.2em 0;
+}
+
+/* VIDEO */
+#background-video {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* PICTURIES */
+
+
+
+/* OTHERS */
+
+.text-border-left {
+    border-left: 3px solid #7B7C64;
+    padding-left: 15px;
+    margin-left: -15px;
+}
+
+#countdown-next-month {
+    font-family: "fontTimer";
+    font-size: 4em;
+    letter-spacing: 5px;
+}
+
+.link-js {
+    font-size: 0.9em;
+    padding-top: 15px;
+    padding-left: 25px;
+}
+
+.link-js:hover, .link-js:active {
+    color: #8D8E72;
+}
+
+.text-prix {
+    font-size: 1.4em;
+    margin: 1em 0;
+}
+
+.link {
+    padding-left: 25px;
+    text-decoration: none;
+    color: #8D8E72;
+}
+
+.link:hover {
+    text-decoration: underline;
+}

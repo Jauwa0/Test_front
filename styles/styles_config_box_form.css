@@ -1,0 +1,149 @@
+/* FORM PERSONNALISATION */
+
+.config-box-content {
+    margin: -5% 0 0 0;
+    padding-top: 8%;
+    padding-bottom: 8%;
+    justify-content: center;
+
+    background: linear-gradient(180deg, rgba(0,0,0,0.5) 00px, rgba(255,255,255,0) 26px),
+    url("../pictures/shattered-dark.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.config-box-partie-gauche {
+    position: relative;
+    width: 50%;
+}
+
+.config-box-partie-gauche img {
+    width: 100%;
+}
+
+.picture-base {
+    box-shadow: 0 4px 26px rgba(0, 0, 0, 0.8)  ;
+    -webkit-box-shadow: 0 4px 26px rgba(0, 0, 0, 0.8)  ;
+    -moz-box-shadow: 0 4px 26px rgba(0, 0, 0, 0.8)  ;
+}
+
+.config-box-partie-droite {
+    width: 400px;
+    margin: 0 0 0 -45px;
+    padding: 1% 20px 40px 45px;
+    border-radius: 10px;
+    background-color: #F8FAFA;
+    font-size: 0.9em;
+    color: black;
+
+    box-shadow: 0 4px 26px rgba(0, 0, 0, 0.8)  ;
+    -webkit-box-shadow: 0 4px 26px rgba(0, 0, 0, 0.8)  ;
+    -moz-box-shadow: 0 4px 26px rgba(0, 0, 0, 0.8)  ;
+    z-index: 2;
+}
+
+.config-box-partie-droite p {
+    margin: 0;
+}
+
+.config-box-produit-content {
+    padding: 2% 0 5% 0 ;
+}
+
+#config-box-conso-supplementaire {
+    display: none;
+}
+
+/* ICONS FORM */
+
+.list-icon-form {
+    margin: 15px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.link-icon-form { /*TODO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+    text-decoration: none;
+}
+
+.icon-form {
+    margin: 2px 3px;
+    padding: 10px 15px;
+    border: 1px solid rgba(141,142,114,0.25);
+    outline: 1px solid rgba(141,142,114,0);
+    border-radius: 5px;
+}
+
+.icon-form:hover {
+    border: 1px solid rgba(141,142,114,0.75);
+    outline: 1px solid rgba(141,142,114,0.75);
+}
+
+.icon-form img {
+    height: 35px;
+    width: 35px;
+}
+
+.icon-form p {
+    margin: 0 0 0 0;
+    padding: 0;
+    text-align: center;
+    font-family: "fontTimer";
+    color: #000;
+    opacity: 0.7;
+    font-size: 1em;
+
+}
+
+.icon-form-camo {
+    height: 50px;
+    width: 50px;
+    margin: 2px 5px;
+    padding: 0;
+    border: 1px solid rgba(141,142,114,0);
+    outline: 2px solid rgba(141,142,114,0);
+    border-radius: 5px;
+}
+
+.icon-form-camo:hover {
+    border: 1px solid rgba(141,142,114,1);
+    outline: 2px solid rgba(141,142,114,1);
+}
+
+.icon-form-camo img {
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+}
+
+.camo-black {
+    background-color: #131615;
+}
+
+.camo-green {
+    background-color: #6c6641;
+}
+
+/* PICTURIES */
+
+.picture-superieure {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+/* HIDDEN PARTS */
+
+#config-box-details-billes, #config-box-details-gaz, #config-box-details-co2,
+#config-box-details-billes-option, #config-box-details-gaz-option, #config-box-details-co2-option {
+    display: none;
+    background-color: blue;
+    height: 20px;
+    transition: height 5s;
+}
+
+
