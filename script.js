@@ -49,70 +49,47 @@ var x = setInterval(function() {
 // BUTTON FORMULAIRE CONFIG BOX
 
 /* --- PRIMARY --- */
+function displayBoxDetails(numberList, numberGroupDetail) {
+    /* Hidden border */
+    var idListIcon = "list-icon-form-" + numberList + "-1";
+    console.log('idListIcon = ' + idListIcon);
+    var mainIcons = document.getElementById(idListIcon);
+    console.log("mainIcons = " + mainIcons);
 
-function hiddenAll() {
-    document.getElementById("config-box-details-billes")
-        .style.setProperty('display', 'none');
-    document.getElementById("config-box-details-gaz")
-        .style.setProperty('display', 'none');
-    document.getElementById("config-box-details-co2")
-        .style.setProperty('display', 'none');
+    for(var i = 0; i < mainIcons.length; i++){
+        mainIcons.querySelector('list-icon-form')[i].classList.remove('icon-form-active');
+    }
+
+    console.log("Display border - numberGroupDetail-1 = " +  (numberGroupDetail-1));
+    /* Display border */
+    mainIcons.querySelector('list-icon-form')[(numberGroupDetail-1)].classList.add('icon-form-active');
+    console.log("mainIcons.querySelect = " + mainIcons.querySelector('list-icon-form')[(numberGroupDetail-1)]);
+
+    /* Hidden all secondary icons */
+    var idSearch = "list-icon-form-" + (numberList+1);
+    $('*[id=idSearch]').style.setProperty('display', 'none');
+
+    /* Display selection */
+    var idListIconSecondary = "list-icon-form-" + (numberList+1) + "-" + numberGroupDetail;
+    var secondaryIcons = document.getElementById(idListIconSecondary);
+    secondaryIcons.style.setProperty('display', 'inherit');
 }
 
-function displayBilles() {
-    /* Hidden all */
-    hiddenAll();
-
-    /* Show */
-    var contentStyle = document.getElementById("config-box-details-billes");
-    contentStyle.setAttribute('id', "config-box-details-billes-active");
-    contentStyle.style.setProperty("display", "inherit");
-
-    /*var elemStyle = document.getElementsByClassName("config-box-details-billes-elem");
-    for(var elem in elemStyle){
-        elemStyle.style.setProperty('animation', 'flipInX');
-        elemStyle.style.setProperty('animation-delay', '1s');
-        elemStyle.style.setProperty('animation-duration', '2s');
-    }*/
-}
-
-function displayGas() {
-    /* Hidden all */
-    hiddenAll();
-
-    /* Show */
-    document.getElementById("config-box-details-gaz")
-        .style.setProperty('display', 'inherit');
-}
-
-function displayCo2() {
-    /* Hidden all */
-    hiddenAll();
-
-    /* Show */
-    document.getElementById("config-box-details-co2")
-        .style.setProperty('display', 'inherit');
-}
 
 /* --- SECONDARY --- */
+function displayBoxDetailsSupp(detailsGroup) {
+    /* Hidden all */
+    var contentStyle = document.getElementsByClassName("config-box-details-supp");
+    for(var i = 0; i < contentStyle.length; i++){
+        contentStyle[i].style.setProperty('display', 'none');
+    }
 
-function hiddenAllOptionnel() {
-
+    /* Show */
+    var elemStyle = document.getElementsByClassName("config-box-details-supp")[detailsGroup];
+    elemStyle.style.setProperty('display', 'inherit');
 }
 
-function displayBillesOptionnel() {
-
-}
-
-function displayGasOptionnel() {
-
-}
-
-function displayCo2Optionnel() {
-
-}
-
-
+/* --- --- */
 
 function addConsommableBoxForm() {
     document.getElementById("button-add-consommable")
@@ -128,4 +105,22 @@ function deleteConsommableBoxForm() {
 
     document.getElementById("config-box-conso-supplementaire")
         .style.setProperty('display', 'none');
+}
+
+// ----------------------------------------------------------------
+
+// COLLAPS
+var coll = document.getElementsByClassName("collaps");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    });
 }

@@ -7,6 +7,7 @@
     justify-content: center;
 
     background: linear-gradient(180deg, rgba(0,0,0,0.5) 00px, rgba(255,255,255,0) 26px),
+    linear-gradient(0deg, rgba(0,0,0,100) 00px, rgba(255,255,255,0) 30px),
     url("../pictures/shattered-dark.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -65,7 +66,7 @@
     flex-wrap: wrap;
 }
 
-.link-icon-form { /*TODO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.link-icon-form {
     text-decoration: none;
 }
 
@@ -78,6 +79,11 @@
 }
 
 .icon-form:hover {
+    border: 1px solid rgba(141,142,114,0.75);
+    outline: 1px solid rgba(141,142,114,0.75);
+}
+
+.icon-form-active {
     border: 1px solid rgba(141,142,114,0.75);
     outline: 1px solid rgba(141,142,114,0.75);
 }
@@ -138,12 +144,6 @@
 
 /* HIDDEN PARTS */
 
-#config-box-details-billes, #config-box-details-gaz, #config-box-details-co2,
-#config-box-details-billes-option, #config-box-details-gaz-option, #config-box-details-co2-option {
+.config-box-details {
     display: none;
-    background-color: blue;
-    height: 20px;
-    transition: height 5s;
 }
-
-

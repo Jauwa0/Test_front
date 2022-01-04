@@ -78,7 +78,7 @@
                 <img src="pictures/icons/settings.png" alt="icon livraison offerte" class="custom-icon">
                 <h3>Configurez</h3>
             </div>
-            <div class="card-concept-text">Partagez nous votre camouflage et vos besoins en consommables en deux temps trois mouvements.</div>
+            <div class="card-concept-text">Partagez nous vos besoins en consommables et votre camouflage en deux temps trois mouvements.</div>
         </div>
         <div class="card-concept">
             <div class="card-concept-title">
@@ -102,13 +102,18 @@
     <div class="bloc-content">
         <div class="partie-gauche">
             <h2>L'OBJECTIF</h2>
-            <p class="text-border-left">Vous approvisionnez en consommables et contribuer à améliorer votre expérience sur le
-                terrain grâce à des accessoires et équipements présents dans nos boxes et choisis
-                avec soin.
+            <p class="text-border-left">
+                <span style="font-size: 1.75em">C</span>olis Stratégique, c'est la livraison d'une box mensuelle composée d'un consommable de
+                votre choix qui répond à votre besoin et d'accessoires choisis avec soin.
                 <br><br>
-                Nos équipements proposés sont le fruit de négociations et collaborations avec les
+                <span style="font-size: 1.75em">N</span>os accessoires proposés sont le fruit de négociations et collaborations avec les
                 marques et fournisseurs. <br>
                 Ils sont également sélectionnés en fonction des tendances et des besoins des saisons actuelles.</p>
+            <p>
+                Ils ont pour but d'améliorer l'expérience du plus grand nombre. <br>
+                La box est destinée à tout type de terrain sans pour autant répondre à un style de jeu particulier.
+                Que vous ayez un jeu agressif ou que vous soyez un sniper dans l'âme, notre box saura vous compléter.
+            </p>
             <div class="bloc-content-center">
                 <!-- grossir btn, revoir couleurs, rapprocher du texte -->
                 <a class="custom-button-primary">ACQUÉRIR SA BOX</a>
@@ -143,34 +148,34 @@
             <!-- CONSO PRINCIPAL -->
             <div class="config-box-produit-content">
                 <p><b>Consommable principal</b></p>
-                <div class="list-icon-form">
-                    <div onclick="displayBilles()" class="icon-form">
+                <div id="list-icon-form-1-1" class="list-icon-form">
+                    <div onclick="displayBoxDetails(1,1)" class="icon-form">
                         <img src="pictures/icons/plastic-bag-black.png" alt="icon sachet de billes">
                         <p>BBs</p>
                     </div>
-                    <div onclick="displayGas()" class="icon-form">
+                    <div onclick="displayBoxDetails(1,2)" class="icon-form">
                         <img src="pictures/icons/gas-bottle-black.png" alt="icon bouteille gaz">
                         <p>GAZ</p>
                     </div>
-                    <div onclick="displayCo2()" class="icon-form">
+                    <div onclick="displayBoxDetails(1,3)" class="icon-form">
                         <img src="pictures/icons/gas-bottle-black.png" alt="icon capsules co2">
                         <p>CO2</p>
                     </div>
                 </div>
 
                 <!-- DETAILS BILLES -->
-                <div id="config-box-details-billes" class="config-box-details-active">
+                <div id="list-icon-form-2-1" class="config-box-details">
                     <div class="list-icon-form">
-                        <div class="icon-form config-box-details-billes-elem">
+                        <div class="icon-form">
                             <p>0,20g</p>
                         </div>
-                        <div class="icon-form config-box-details-billes-elem">
+                        <div class="icon-form">
                             <p>0,25g</p>
                         </div>
-                        <div class="icon-form config-box-details-billes-elem">
+                        <div class="icon-form">
                             <p>0,28g</p>
                         </div>
-                        <div class="icon-form config-box-details-billes-elem">
+                        <div class="icon-form">
                             <p>0,32g</p>
                         </div>
                     </div>
@@ -179,58 +184,43 @@
                 </div>
 
                 <!-- DETAILS GAZ -->
-                <div id="config-box-details-gaz">
+                <div id="list-icon-form-2-2" class="config-box-details">
                     <div class="list-icon-form">
-                        <a href="" class="link-icon-form">
-                            <div class="icon-form">
-                                <p>130 PSI sec</p>
-                            </div>
-                        </a>
-                        <a href="" class="link-icon-form">
-                            <div class="icon-form">
-                                <p>130 PSI lubrifié</p>
-                            </div>
-                        </a>
-                        <a href="" class="link-icon-form">
-                            <div class="icon-form">
-                                <p>150 PSI sec</p>
-                            </div>
-                        </a>
-                        <a href="" class="link-icon-form">
-                            <div class="icon-form">
-                                <p>150 PSI lubrifié</p>
-                            </div>
-                        </a>
+                        <div class="icon-form">
+                            <p>130 PSI sec</p>
+                        </div>
+                        <div class="icon-form">
+                            <p>130 PSI lubrifié</p>
+                        </div>
+                        <div class="icon-form">
+                            <p>150 PSI sec</p>
+                        </div>
+                        <div class="icon-form">
+                            <p>150 PSI lubrifié</p>
+                        </div>
                     </div>
                     <!-- PAGE D'AIDE -->
-                    <a href="" class="link">Que choisir ?</a>
+                    <a href="" class="link config-box-details-billes">Que choisir ?</a>
                 </div>
 
                 <!-- DETAILS CO2 -->
-                <div id="config-box-details-co2">
+                <div id="list-icon-form-2-3" class="config-box-details">
                     <div class="list-icon-form">
-                        <a href="" class="link-icon-form">
-                            <div class="icon-form">
-                                <p>&nbsp5 capsules</p>
-                            </div>
-                        </a>
-                        <a href="" class="link-icon-form">
-                            <div class="icon-form">
-                                <p>10 capsules</p>
-                            </div>
-                        </a>
-                        <a href="" class="link-icon-form">
-                            <div class="icon-form">
-                                <p>15 capsules</p>
-                            </div>
-                        </a>
-                        <a href="" class="link-icon-form">
-                            <div class="icon-form">
-                                <p>20 capsules</p>
-                            </div>
-                        </a>
+                        <div class="icon-form">
+                            <p>x 5</p>
+                        </div>
+                        <div class="icon-form">
+                            <p>x 10</p>
+                        </div>
+                        <div class="icon-form">
+                            <p>x 20</p>
+                        </div>
                     </div>
+                    <!-- PAGE D'AIDE -->
+                    <a href="" class="link config-box-details-billes">Que choisir ?</a>
                 </div>
+
+
 
                 <!-- AJOUT CONSOMMABLE -->
                 <p id="button-add-consommable" onclick="addConsommableBoxForm()" class="link-js">
@@ -243,28 +233,22 @@
             <div id="config-box-conso-supplementaire" class="config-box-produit-content">
                 <p><b>Consommable supplémentaire</b></p>
                 <div class="list-icon-form">
-                    <a href="" class="link-icon-form">
-                        <div class="icon-form">
-                            <img src="pictures/icons/plastic-bag-black.png" alt="icon sachet de billes">
-                            <p>BBs</p>
-                        </div>
-                    </a>
-                    <a href="" class="link-icon-form">
-                        <div class="icon-form">
-                            <img src="pictures/icons/gas-bottle-black.png" alt="icon bouteille gaz">
-                            <p>GAZ</p>
-                        </div>
-                    </a>
-                    <a href="" class="link-icon-form">
-                        <div class="icon-form">
-                            <img src="pictures/icons/gas-bottle-black.png" alt="icon capsules co2">
-                            <p>CO2</p>
-                        </div>
-                    </a>
+                    <div onclick="displayBoxDetailsSupp(0)" class="icon-form">
+                        <img src="pictures/icons/plastic-bag-black.png" alt="icon sachet de billes">
+                        <p>BBs</p>
+                    </div>
+                    <div onclick="displayBoxDetailsSupp(1)" class="icon-form">
+                        <img src="pictures/icons/gas-bottle-black.png" alt="icon bouteille gaz">
+                        <p>GAZ</p>
+                    </div>
+                    <div onclick="displayBoxDetailsSupp(2)" class="icon-form">
+                        <img src="pictures/icons/gas-bottle-black.png" alt="icon capsules co2">
+                        <p>CO2</p>
+                    </div>
                 </div>
 
                 <!-- DETAILS BILLES -->
-                <div id="config-box-details-billes-option">
+                <div class="config-box-details-supp">
                     <div class="list-icon-form">
                         <a href="" class="link-icon-form">
                             <div class="icon-form">
@@ -290,7 +274,7 @@
                 </div>
 
                 <!-- DETAILS GAZ -->
-                <div id="config-box-details-gaz-option">
+                <div class="config-box-details-supp">
                     <div class="list-icon-form">
                         <a href="" class="link-icon-form">
                             <div class="icon-form">
@@ -316,7 +300,7 @@
                 </div>
 
                 <!-- DETAILS CO2 -->
-                <div id="config-box-details-co2-option">
+                <div class="config-box-details-supp">
                     <div class="list-icon-form">
                         <a href="" class="link-icon-form">
                             <div class="icon-form">
@@ -422,16 +406,65 @@
         </div>
     </div>
 
-    <!-- PARTIE 6 - DETAILS OFFRE BOX -->
+    <!-- PARTIE 6 - FAQ -->
     <div class="bloc-content">
-        <div class="partie-gauche">
-            Colis Stratégique, c'est la livraison d'une box mensuelle composée d'un consommable de
-            votre choix qui répond à votre besoin. <br><br>
-            Avec ceci vous trouverez un ou plusieurs accessoire(s) judicieusement sélectionné(s) par notre équipe pour
-            chaque box et en fonction des saisons. <br>
-            Ils ont pour but d'améliorer l'expérience du plus grand nombre. <br>
-            La box est destinée à tout type de terrain sans pour autant répondre à un style de jeu particulier.
-            Que vous ayez un jeu agressif ou que vous soyez un sniper dans l'âme, notre box saura vous compléter.
+        <h2 class="bloc-content-title">FAQ</h2>
+
+        <!-- https://www.w3schools.com/howto/howto_js_collapsible.asp -->
+
+        <button type="button" class="collaps">Open Collapsible</button>
+        <div class="collaps-content">
+            <p>Lorem ipsum...</p>
+        </div>
+
+        <button type="button" class="collaps"><h3>Pertinence des produits et accessoires !</h3></button>
+        <div class="collaps-content">
+            <p class="text-border-left">
+                Toutes billes => bio
+                Accessoires adaptés à tout terrains (Forêts, CQB, … )
+                L'objectif est de répondre aux besoins du plus grand nombre sans favoriser des styles de jeu.
+                Vous ne recevrez donc jamais de chargeurs et accessoires spécifiques à un type de réplique ou style de jeu (exemple, une gillie).
+                De même, nous sélectionnons des équipements propice à la période de l’année.
+                Par exemple, vous ne recevrez donc jamais de pancho en juillet !
+            </p>
+        </div>
+
+        <div>
+            Quand vais-je recevoir ma box ?
+
+            Si vous vous abonnez entre le 1 et le 10 du mois vous recevrez la box du mois en cours. Si vous vous abonnez après le 10 du mois vous recevrez la box du mois suivant.
+
+            Les box arrivent généralement entre le 20 et le 25 de chaque mois.
+
+            Par exemple si vous vous abonnez le 8 février vous recevrez votre première box entre le 20 et le 25 février.
+            Si vous vous abonnez le 17 février vous recevrez votre première box entre le 20 et le 25 mars.
+        </div>
+
+        <div>
+            Est-ce que cette box est faite pour moi ?
+
+            Vous êtes un passionné d’airsoft qui consomme au moins un sachet de bille par mois ?
+
+            Dans ce cas nous pensons que notre offre peut vous intéresser.
+
+            Vous voulez vous faire votre propre avis ?
+            Vous pouvez tester notre ravitaillement pendant 1 mois seulement sans engagement ! Parfait !
+        </div>
+
+        <div>
+            Et si je souhaite me désabonner ?
+
+        </div>
+
+        <div>
+            Quelle taille fait la box ?
+
+            La taille de votre colis stratégique peut varier selon la taille des accessoires ou de vos consommables.
+
+            En générale, la taille sera de :
+            Au maximum, la taille sera de :
+
+            Par conséquent le colis ne rentre pas dans la majorité des boîtes aux lettres. Colis Stratégique vous conseille donc de vous le faire livrer en point relais !
         </div>
     </div>
 

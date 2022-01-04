@@ -149,3 +149,23 @@
 .usp .partie-gauche {
     margin: 0 0 0 0; /* 0 45px 0 50px */
 }
+
+/* COLLAPS */
+.collaps {
+    cursor: pointer; /* !!!!!!!!!!!!!!!! */
+    width: 100%;
+    border: none;
+    text-align: left;
+    /*outline: none;*/
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collaps:hover {
+    /*background-color: #ccc;*/
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.collaps-content {
+    display: none;
+    overflow: hidden;
+}
