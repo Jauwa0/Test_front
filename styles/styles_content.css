@@ -5,7 +5,7 @@
 }
 
 .bloc-content {
-    margin: 5% 0 5% 0;
+    margin: 3% 0 5% 0;
     padding: 3% 0 3% 180px;
     display: flex;
     flex-direction: row;
@@ -151,12 +151,36 @@
 }
 
 /* COLLAPS */
+.bloc-content-collaps {
+    width: min(80%, 1000px); /* prend la valeur la plus petite */
+    margin-top: 5vh;
+}
+
+.bloc-content-collaps-part {
+    border-bottom: 1px solid #fff;
+    margin: 0 0;
+    padding: 1em 0;
+}
+
+.bloc-content-collaps-part:first-child {
+    border-top: 1px solid #fff;
+}
+
 .collaps {
     cursor: pointer; /* !!!!!!!!!!!!!!!! */
     width: 100%;
-    border: none;
     text-align: left;
-    /*outline: none;*/
+    color: #fff;
+    border: none;
+    outline: none;
+    background-color: #060301;
+    padding-left: 25px;
+}
+
+.collaps h3:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    color: #fff;
+    float: right;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -164,8 +188,14 @@
     /*background-color: #ccc;*/
 }
 
+.active h3:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
 /* Style the collapsible content. Note: hidden by default */
 .collaps-content {
-    display: none;
     overflow: hidden;
+    padding: 0 20px;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
 }

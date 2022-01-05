@@ -7,11 +7,13 @@
     justify-content: center;
 
     background: linear-gradient(180deg, rgba(0,0,0,0.5) 00px, rgba(255,255,255,0) 26px),
-    linear-gradient(0deg, rgba(0,0,0,100) 00px, rgba(255,255,255,0) 30px),
+    linear-gradient(0deg, rgba(0,0,0,0.5) 00px, rgba(255,255,255,0) 26px),
     url("../pictures/shattered-dark.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+
+    border-bottom: 2px solid #8D8E72;
 }
 
 .config-box-partie-gauche {
