@@ -113,7 +113,8 @@
 
 #countdown-next-month {
     font-family: "fontTimer";
-    font-size: 4em;
+    font-variant-numeric: tabular-nums;
+    font-size: 3em;
     letter-spacing: 5px;
 }
 

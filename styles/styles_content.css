@@ -152,8 +152,8 @@
     position: absolute;
     left: 0;
     height: 100%;
-    width: calc(30% + 180px);
-    padding: 0 25px 0 calc(180px + 25px);
+    width: min(calc(20% + 180px), 1000px);
+    padding: 0 max(40px, 5%) 0 max(calc(180px + 25px), calc(180px + 5%));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -164,6 +164,7 @@
 
 .usp .partie-gauche {
     margin: 0 0 0 0; /* 0 45px 0 50px */
+    min-width: 300px;
 }
 
 /* COLLAPS */
