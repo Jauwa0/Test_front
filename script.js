@@ -1,3 +1,73 @@
+
+/* ANIMATION MANAGEMENT */
+/* cancel animation during resize windows */
+
+let resizeTimer;
+window.addEventListener("resize", () => {
+    document.body.classList.add("resize-animation-stopper");
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+        document.   body.classList.remove("resize-animation-stopper");
+    }, 400);
+});
+
+// ----------------------------------------------------------------
+
+/* ICON ANIMATED */
+
+const iconAnimated = document.querySelector('.icon-animated-1').querySelectorAll('.icon-face');
+var iconNumber = 0;
+
+var y = setInterval(() => {
+
+    console.log('iconNumber = ' + iconNumber);
+
+    if(iconNumber < iconAnimated.length){
+        if (iconNumber > 0) {
+            iconAnimated[iconNumber-1].classList.remove('animate__flipInX');
+            iconAnimated[iconNumber-1].classList.add('animate__flipOutX');
+            iconAnimated[iconNumber-1].addEventListener('animationend', () => {
+                iconAnimated[iconNumber-1].classList.remove('animate__animated', 'animate__flipOutX');
+                iconAnimated[iconNumber-1].style.setProperty('display', 'none');
+
+                iconAnimated[iconNumber].classList.add('animate__animated', 'animate__flipInX');
+                iconAnimated[iconNumber].style.setProperty('display', 'inherit');
+            });
+        } else {
+            iconAnimated[iconAnimated.length-1].classList.remove('animate__flipInX');
+            iconAnimated[iconAnimated.length-1].classList.add('animate__flipOutX');
+            iconAnimated[iconAnimated.length-1].addEventListener('animationend', () => {
+                iconAnimated[iconAnimated.length-1].classList.remove('animate__animated', 'animate__flipOutX');
+                iconAnimated[iconAnimated.length-1].style.setProperty('display', 'none');
+            });
+
+            iconAnimated[iconNumber].classList.add('animate__animated', 'animate__flipInX');
+            iconAnimated[iconNumber].style.setProperty('display', 'inherit');
+        }
+    } else {
+        iconAnimated[iconNumber-1].classList.remove('animate__flipInX');
+        iconAnimated[iconNumber-1].classList.add('animate__flipOutX');
+        iconAnimated[iconNumber-1].addEventListener('animationend', () => {
+            iconAnimated[iconNumber-1].classList.remove('animate__animated', 'animate__flipOutX');
+            iconAnimated[iconNumber-1].style.setProperty('display', 'none');
+
+            iconAnimated[iconNumber].classList.add('animate__animated', 'animate__flipInX');
+            iconAnimated[iconNumber].style.setProperty('display', 'inherit');
+            /* visibility ??????????????????????? */
+
+        });
+
+        iconNumber = 0;
+    }
+
+    iconNumber++;
+
+}, 3000);
+
+// ----------------------------------------------------------------
+
+/* COUNTER TIMER */
+
 // Set the date we're counting down to
 var countDownDate = new Date(2022,3, 15, 11, 0, 0).getTime();
 
@@ -75,7 +145,6 @@ function displayBoxDetails(numberList, numberGroupDetail) {
     secondaryIcons.style.setProperty('display', 'inherit');
 }
 
-
 /* --- SECONDARY --- */
 function displayBoxDetailsSupp(detailsGroup) {
     /* Hidden all */
@@ -124,3 +193,4 @@ for (i = 0; i < coll.length; i++) {
         }
     });
 }
+

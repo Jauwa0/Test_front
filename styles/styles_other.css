@@ -4,7 +4,7 @@
     text-align: center;
 }
 
-.custom-button-primary {
+.button-primary {
     text-decoration: none;
     text-transform: uppercase;
     background-color: #8D8E72;
@@ -15,7 +15,7 @@
     padding: 0.6em 1em;
 }
 
-.custom-button-primary:hover {
+.button-primary:hover {
     box-shadow: 0 0 18px -2px rgba(71,71,57,0.74);
 }
 
@@ -26,7 +26,7 @@
     box-shadow: none;
 }*/
 
-.custom-button-secondary {
+.button-secondary {
     text-decoration: none;
     text-transform: uppercase;
     /*background-color: #8D8E72;*/
@@ -37,15 +37,15 @@
     padding: 0.6em 1.7em;
 }
 
-.custom-button-secondary:hover {
+.button-secondary:hover {
     background-color: #E3E3DC;
 }
 
-.custom-button-secondary:active {
+.button-secondary:active {
     background-color: #D4D5CA;
 }
 
-.custom-button-tertiary {
+.button-tertiary {
     text-decoration: none;
     text-transform: uppercase;
     color: #8D8E72;
@@ -54,11 +54,11 @@
     padding: 0.6em 1.7em;
 }
 
-.custom-button-tertiary:hover {
+.button-tertiary:hover {
     background-color: #E3E3DC;
 }
 
-.custom-button-tertiary:active {
+.button-tertiary:active {
     background-color: #D4D5CA;
 }
 
@@ -89,6 +89,30 @@
     margin: 0 0.2em -0.2em 0;
 }
 
+/* ICON ANIMATED */
+
+.list-icon-animated {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-animated {
+}
+
+.icon-face {
+    width: 50px;
+    height: 50px;
+    background: red;
+    margin: 1rem;
+    color: white;
+    text-align: center;
+    display: none;
+}
+
+
+
 /* VIDEO */
 #background-video {
     max-width: 100%;
@@ -113,7 +137,7 @@
 
 #countdown-next-month {
     font-family: "fontTimer";
-    font-variant-numeric: tabular-nums;
+    font-variant-numeric: tabular-nums ;
     font-size: 3em;
     letter-spacing: 5px;
 }

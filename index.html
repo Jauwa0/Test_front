@@ -12,61 +12,101 @@
     <!-- ANIMATE.CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
+    <!-- icon font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- Icons by Flaticon.com ! Thanks to them ! -->
 
     <title>Title</title>
 </head>
 <body>
 
-<a href=""><img src="pictures/logos/LOGO+COLISSTRATÉGIQUE.png" alt="Logo Colis Stratégique" id="logo"></a>
-<div id="navbar-main">
-    <ul>
-        <li class="navbar-n1 navbar-n1-current">ACCUEIL</li>
-        <li class="navbar-n1">BOUTIQUE</li>
-        <li class="navbar-n1">OUTILS</li>
-        <!--
-        <li class="navbar-n1">CONNEXION</li>
-        <li class="navbar-n1">INSCRIPTION</li>
-        -->
-        <!-- OU -->
-        <li class="navbar-n1">MON PROFIL</li>
-        <li class="navbar-n1">PANIER</li>
-        <!-- -->
-        <div class="navbar-second-block">
-            <li class="navbar-n1">CONTACT</li>
-            <li class="navbar-n1">DÉCONNEXION</li>
-        </div>
-    </ul>
-</div>
+<header>
+    <!-- LOGO -->
+    <a href=""><img src="pictures/logos/LOGO+COLISSTRATÉGIQUE.png" alt="Logo Colis Stratégique" id="logo"></a>
+
+    <button class="mobile-nav-toggle"
+            aria-controls="primary-navigation"
+            aria-expanded="false">
+        <span class="sr-only">Menu</span>
+    </button>
+
+    <nav>
+        <ul id="primary-navigation" data-visible="false" class="primary-navigation">
+            <li class="primary-navigation-1 uppercase primary-navigation-current">Accueil</li>
+            <li class="primary-navigation-1 uppercase">La box</li>
+            <li class="primary-navigation-1 uppercase">Boutique</li>
+            <li class="primary-navigation-1 uppercase">Outils</li>
+            <li class="primary-navigation-1 uppercase">Panier</li>
+            <li class="primary-navigation-1 uppercase">Profil</li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ICON SOCIAL NETWORK -->
 <div id="socials-network">
     <a href=""><img src="pictures/logos/instagram.png" alt="Icon Instagramm" class="social-network"></a>
     <a href=""><img src="pictures/logos/facebook.png" alt="Icon Facebook" class="social-network"></a>
 </div>
+
 <div id="main-content">
 
     <!-- PARTIE 1 - USP -->
     <div class="usp">
-        <div id="usp-blur">
-            <div class="partie-gauche">
-                <h1>VOTRE BOX D'AIRSOFT</h1>
+        <!-- <div id="usp-blur"> -->
+        <div class="partie-gauche">
+            <p class="subtitle">COLIS STRATÉGIQUE</p>
+            <h1>VOTRE BOX D'AIRSOFT</h1>
 
-                <p class="text-border-left">Colis Stratégique vous permet de faire le plein en
-                    <b>consommables</b> grâce à sa box adaptée à vos besoins. <br>
-                    Mais également d'améliorer l'expérience de vos parties
-                    au moyen d'<b>accessoires</b> judicieusement sélectionnés par notre équipe.</p>
+            <p class="text-border-left">Colis Stratégique vous permet de faire le plein en
+                <b>consommables</b> grâce à sa box adaptée à vos besoins. <br>
+                Mais également d'améliorer l'expérience de vos parties
+                au moyen d'<b>accessoires</b> judicieusement sélectionnés par notre équipe.</p>
 
-                <p>Vous pouvez choisir de commander <b>une seule box</b>, ou de <b>vous abonner</b> pour en recevoir
-                    une tous les mois. <br>
-                    L’abonnement c’est aussi <b>sans engagement</b> et <b>résiliable en un clic</b> !</p>
+            <p>Vous pouvez choisir de commander <b>une seule box</b>, ou de <b>vous abonner</b> pour en recevoir
+                une tous les mois. <br>
+                L’abonnement c’est aussi <b>sans engagement</b> et <b>résiliable en un clic</b> !</p>
 
-                <div>ICON + ICON + ICON = LOGO</div>
+            <!-- ICON ANIMATED -->
+            <div class="list-icon-animated">
+                <div class="icon-animated-1">
+                    <div class="icon-face">1</div>
+                    <div class="icon-face">2</div>
+                    <div class="icon-face">3</div>
+                </div>
 
-                <div class="bloc-content-center">
-                    <!-- grossir btn, revoir couleurs, rapprocher du texte -->
-                    <a class="custom-button-primary">ACQUÉRIR SA BOX</a>
+                <div class="symbole">+</div>
+
+                <div class="icon-animated-2">
+                    <div class="icon-face">1</div>
+                    <div class="icon-face">2</div>
+                    <div class="icon-face">3</div>
+                    <div class="icon-face">4</div>
+                </div>
+
+                <div class="symbole">+</div>
+
+                <div class="icon-animated">
+                    <div class="icon-face">1</div>
+                </div>
+
+                <div class="symbole">=</div>
+
+                <div class="icon-animated">
+                    <div class="icon-face">1</div>
                 </div>
             </div>
+            <!-- END ICON ANIMATED -->
+
+            <div class="bloc-content-center">
+                <!-- grossir btn, revoir couleurs, rapprocher du texte -->
+                <a class="custom-button-primary">ACQUÉRIR SA BOX</a>
+            </div>
         </div>
+
+        <div class="partie-droite">
+        </div>
+        <!-- </div> -->
     </div>
 
     <!-- PARTIE 2 - CONCEPT -->
@@ -510,7 +550,9 @@
 </div>
 
     <!-- JAVASCRIPT -->
-    <script src="./script.js"></script>
+    <script src="script.js" defer></script>
+    <script src="nav.js" defer></script>
+
 </body>
 </html>
 

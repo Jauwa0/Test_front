@@ -132,12 +132,9 @@
 
 /* USP */
 .usp{
-    height: 100%;
     min-height: 100vh;
-    /*padding-left: 180px;*/
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
     align-items: center;
 
     /* linear-gradient(90deg, rgba(0,0,0,0.5) 55%, rgba(0,0,0,0.3) 100%) */
@@ -148,22 +145,25 @@
     background-size: cover;
 }
 
-#usp-blur {
+/*#usp-blur {
     position: absolute;
     left: 0;
     height: 100%;
-    width: min(calc(20% + 180px), 1000px);
-    padding: 0 max(40px, 5%) 0 max(calc(180px + 25px), calc(180px + 5%));
+    width: 50%;
+    padding: 0 max(40px, 5%) 0 max(25px, 5%);
     display: flex;
     justify-content: center;
     align-items: center;
-    -webkit-backdrop-filter: blur(5px); /* assure la compatibilité avec safari */
+    -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     z-index: 0;
-}
+}*/
 
 .usp .partie-gauche {
-    margin: 0 0 0 0; /* 0 45px 0 50px */
+    padding: 3rem;
+    margin: max(5rem, 7%);
+    -webkit-backdrop-filter: blur(0.5rem);
+    backdrop-filter: blur(0.5rem);
     min-width: 300px;
 }
 
