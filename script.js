@@ -16,53 +16,43 @@ window.addEventListener("resize", () => {
 /* ICON ANIMATED */
 
 const iconAnimated = document.querySelector('.icon-animated-1').querySelectorAll('.icon-face');
-var iconNumber = 0;
+var iconNumber = 0, firstTime = true, timeAnimation = 0;
 
-var y = setInterval(() => {
+iconRotation();
 
-    console.log('iconNumber = ' + iconNumber);
+/*function iconRotation() {
+    if (firstTime){
+        console.log('iconNumber = ' + iconNumber);
 
-    if(iconNumber < iconAnimated.length){
-        if (iconNumber > 0) {
-            iconAnimated[iconNumber-1].classList.remove('animate__flipInX');
-            iconAnimated[iconNumber-1].classList.add('animate__flipOutX');
-            iconAnimated[iconNumber-1].addEventListener('animationend', () => {
-                iconAnimated[iconNumber-1].classList.remove('animate__animated', 'animate__flipOutX');
-                iconAnimated[iconNumber-1].style.setProperty('display', 'none');
+        iconAnimated[iconNumber].style.setProperty('display', 'inherit');
+        iconAnimated[iconNumber].classList.add('animate__animated', 'animate__flipInX');
 
-                iconAnimated[iconNumber].classList.add('animate__animated', 'animate__flipInX');
-                iconAnimated[iconNumber].style.setProperty('display', 'inherit');
-            });
-        } else {
-            iconAnimated[iconAnimated.length-1].classList.remove('animate__flipInX');
-            iconAnimated[iconAnimated.length-1].classList.add('animate__flipOutX');
-            iconAnimated[iconAnimated.length-1].addEventListener('animationend', () => {
-                iconAnimated[iconAnimated.length-1].classList.remove('animate__animated', 'animate__flipOutX');
-                iconAnimated[iconAnimated.length-1].style.setProperty('display', 'none');
-            });
-
-            iconAnimated[iconNumber].classList.add('animate__animated', 'animate__flipInX');
-            iconAnimated[iconNumber].style.setProperty('display', 'inherit');
-        }
+        iconNumber++;
+        firstTime = false;
+        setTimeout(iconRotation(), 1000);
     } else {
-        iconAnimated[iconNumber-1].classList.remove('animate__flipInX');
-        iconAnimated[iconNumber-1].classList.add('animate__flipOutX');
+        iconAnimated[iconNumber-1].classList.remove('animate__animated', 'animate__flipInX');
+        iconAnimated[iconNumber-1].classList.add('animate__animated', 'animate__flipOutX');
         iconAnimated[iconNumber-1].addEventListener('animationend', () => {
-            iconAnimated[iconNumber-1].classList.remove('animate__animated', 'animate__flipOutX');
             iconAnimated[iconNumber-1].style.setProperty('display', 'none');
+            iconAnimated[iconNumber-1].classList.remove('animate__animated', 'animate__flipOutX');
 
-            iconAnimated[iconNumber].classList.add('animate__animated', 'animate__flipInX');
+            console.log('iconNumber = ' + iconNumber);
+
+            if(iconNumber === iconAnimated.length) { iconNumber = 0; }
+
+            console.log('iconNumber = ' + iconNumber);
+
             iconAnimated[iconNumber].style.setProperty('display', 'inherit');
-            /* visibility ??????????????????????? */
-
+            iconAnimated[iconNumber].classList.add('animate__animated', 'animate__flipInX');
+            iconAnimated[iconNumber].addEventListener('animationend', () => {
+                iconNumber++;
+                console.log('iconNumber = ' + iconNumber);
+                setTimeout(iconRotation(), 3000);
+            });
         });
-
-        iconNumber = 0;
     }
-
-    iconNumber++;
-
-}, 3000);
+}*/
 
 // ----------------------------------------------------------------
 
@@ -112,7 +102,6 @@ var x = setInterval(function() {
         document.getElementById("demo").innerHTML = "EXPIRED";
     }
 }, 1000);
-
 
 // ----------------------------------------------------------------
 
@@ -194,3 +183,4 @@ for (i = 0; i < coll.length; i++) {
     });
 }
 
+// ----------------------------------------------------------------

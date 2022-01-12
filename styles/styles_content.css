@@ -145,20 +145,6 @@
     background-size: cover;
 }
 
-/*#usp-blur {
-    position: absolute;
-    left: 0;
-    height: 100%;
-    width: 50%;
-    padding: 0 max(40px, 5%) 0 max(25px, 5%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
-    z-index: 0;
-}*/
-
 .usp .partie-gauche {
     padding: 3rem;
     margin: max(5rem, 7%);

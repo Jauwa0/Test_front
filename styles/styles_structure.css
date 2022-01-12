@@ -109,7 +109,11 @@ header {
 
 /* LOGO */
 #logo {
-    height: 3rem;
+    /*position: absolute;
+    margin: 2rem;
+    top: 0;
+    left: 0;*/
+    height: 4rem;
 }
 
 @media screen and (min-width: 850px) {
@@ -164,6 +168,10 @@ header {
         padding: 1rem 0;
         text-align: center;
         font-size: 1rem;
+    }
+
+    .primary-navigation-1:hover {
+        color: #8D8E72;
     }
 
     .mobile-nav-toggle {

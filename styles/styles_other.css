@@ -109,6 +109,8 @@
     color: white;
     text-align: center;
     display: none;
+
+    --animate-duration: 1s
 }
 
 
