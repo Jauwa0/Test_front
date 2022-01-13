@@ -5,36 +5,28 @@
 }
 
 .bloc-content {
-    margin: 3% 0 5% 0;
-    padding: 3% 0 3% 180px;
+    margin: 0; /* 3% 0 5% 0 */
+    padding: 4rem 2rem;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-evenly;
     align-items: center;
     color: white;
+
+    transition: all 0.5s linear;
 }
 
-#footer {
-    display: flex;
-    flex-direction: row;
+.wrap {
     flex-wrap: wrap;
-    justify-content: center;
-    color: #ffffff;
-
-    padding: 2% 0;
-
-    font-size: 90%;
-}
-
-#footer div {
-    padding: 3vh 3vw;
 }
 
 .partie-gauche {
+    width: 50%;
     max-width: 525px;
-    margin: 0 45px 0 50px; /* 0 45px 0 50px */
+    margin: max(5rem, 5%) max(1rem, 7%); /* 0 45px 0 50px */
     color: white;
+    flex-grow: 1;
     z-index: 1;
 }
 
@@ -44,9 +36,24 @@
 }
 
 .partie-droite {
+    width: 50%;
+
     max-width: 600px;
     color: white;
+    flex-grow: 1;
     z-index: 1;
+}
+
+@media screen and (max-width: 1024px) {
+    .bloc-content {
+        padding-inline: 0;
+        flex-wrap: wrap;
+        transition: all 0.5s linear;
+    }
+
+    .partie-gauche {
+        margin-bottom: 2rem;
+    }
 }
 
 .bloc-text-center {
@@ -56,7 +63,7 @@
 .bloc-content-center {
     width: 100%;
     text-align: center;
-    padding: 4em 0 3em 0;
+    padding: 1rem 0;
 }
 
 .bloc-content-timer {
@@ -82,42 +89,6 @@
     color: white;
 }
 
-.card-concept {
-    display: flex;
-    flex-direction: column;
-    width: 33%;
-    max-width: 400px;
-    margin: 0.5em 0.5em;
-    padding: 1em 2em;
-
-}
-
-.card-concept-title {
-    display: flex;
-    flex-direction: row;
-}
-
-.card-concept-title h3 {
-    margin: 15px 0 0 0;
-    padding: 0 0 0 0.5em;
-    color: #8D8E72;
-}
-
-.card-concept-number {
-    position: relative;
-    font-size: 2.65em;
-    font-weight: bold;
-    color: white;
-    left: -20px;
-    top: 10px;
-    z-index: 51;
-}
-
-.card-concept-text {
-    padding: 0px 0 0 25px;
-    color: white;
-}
-
 .sous-text {
     font-size: 80%;
     margin-top: 0;
@@ -133,9 +104,7 @@
 /* USP */
 .usp{
     min-height: 100vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    justify-content: flex-start;
 
     /* linear-gradient(90deg, rgba(0,0,0,0.5) 55%, rgba(0,0,0,0.3) 100%) */
     background-image: linear-gradient(186deg, rgba(0,0,0,0) 0%, rgba(6,3,1,1) 100%),
@@ -146,11 +115,48 @@
 }
 
 .usp .partie-gauche {
-    padding: 3rem;
-    margin: max(5rem, 7%);
+    padding: min(3rem, 7%);
+    /*margin: max(5rem, 7%) max(3rem, 7%);*/
     -webkit-backdrop-filter: blur(0.5rem);
     backdrop-filter: blur(0.5rem);
-    min-width: 300px;
+    /*min-width: 300px;*/
+}
+
+/* CONCEPT */
+.card-concept {
+    display: flex;
+    flex-direction: column;
+    min-width: 290px;
+    max-width: 400px;
+    margin: 0.5em 0.5em;
+    padding: 1em 2em;
+
+}
+
+.card-concept-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card-concept-title h3 {
+    margin: 0;
+    padding: 0 0 0 0.5em;
+    color: #8D8E72;
+}
+
+.card-concept-number {
+    position: relative;
+    font-size: 2.65em;
+    font-weight: bold;
+    color: white;
+    left: -20px;
+    top: 20px;
+}
+
+.card-concept-text {
+    padding: 0px 0 0 25px;
+    color: white;
 }
 
 /* COLLAPS */
@@ -197,4 +203,21 @@
     padding: 0 20px;
     max-height: 0;
     transition: max-height 0.2s ease-out;
+}
+
+/* FOOTER */
+#footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #ffffff;
+
+    padding: 2% 0;
+
+    font-size: 90%;
+}
+
+#footer div {
+    padding: 3vh 3vw;
 }
