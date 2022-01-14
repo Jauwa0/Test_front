@@ -117,13 +117,6 @@
     margin-left: -15px;
 }
 
-#countdown-next-month {
-    font-family: "fontTimer";
-    font-variant-numeric: tabular-nums ;
-    font-size: 3em;
-    letter-spacing: 5px;
-}
-
 .link-js {
     font-size: 0.9em;
     padding-top: 15px;

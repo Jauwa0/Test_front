@@ -37,6 +37,7 @@ h2 {
 h3 {
     font-size: 1.33em;
     letter-spacing: 1px;
+    color: #8D8E72;
 }
 
 p {
@@ -88,6 +89,11 @@ ul {
     transition: background-color 0.3s linear;
 }
 
+#header a {
+    display: flex;
+    align-items: center;
+}
+
 .mobile-nav-toggle {
     display: none;
 }
@@ -116,6 +122,21 @@ ul {
     height: 3rem;
 }
 
+/* SOCIAL NETWORK */
+#socials-network {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    display: flex;
+    flex-direction: row;
+    z-index: 51;
+}
+
+.social-network {
+    height: 2rem;
+    padding: 0 0 0 1rem;
+}
+
 @media screen and (min-width: 850px) {
     .primary-navigation {
         margin-right: 3rem;
@@ -132,9 +153,6 @@ ul {
 }
 
 @media screen and (max-width: 849px) {
-    #header {
-        background: #FFF;
-    }
 
     #logo {
         height: 3rem;
@@ -155,14 +173,6 @@ ul {
 
     .primary-navigation[data-visible="true"] {
         transform: translateX(0%);
-    }
-
-    /* for browser which support backdrop-filter */
-    @supports (backdrop-filter: blur(1rem)) {
-        .primary-navigation {
-            background: rgba(34, 27, 27, 0.7);
-            backdrop-filter: blur(1rem);
-        }
     }
 
     .primary-navigation-1 {
@@ -193,22 +203,27 @@ ul {
     .mobile-nav-toggle[aria-expanded="true"] {
         background-image: url("../pictures/close.png");
     }
-}
 
-/* SOCIAL NETWORK */
-#socials-network {
-    position: fixed;
-    bottom: 30px;
-    left: 10px;
-    display: flex;
-    flex-direction: row;
-    z-index: 51;
-}
+    #socials-network {
+        width: 100%;
+        backdrop-filter: blur(0.5rem);
+        justify-content: center;
+        bottom: 0;
+        left: 0;
+    }
 
-.social-network {
-    height: 1em;
-    height: 30px;
-    padding: 0 0 0 1.75em;
+    .social-network {
+        height: 1.5rem;
+        padding: 0.25rem 1rem;
+    }
+
+    /* for browser which support backdrop-filter */
+    @supports (backdrop-filter: blur(1rem)) {
+        .primary-navigation {
+            background: rgba(34, 27, 27, 0.7);
+            backdrop-filter: blur(1rem);
+        }
+    }
 }
 
 /* ANIMATION MANAGEMENT */

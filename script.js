@@ -15,10 +15,8 @@ window.addEventListener("resize", () => {
 
 /* ICON ANIMATED */
 
-const iconAnimated = document.querySelector('.icon-animated-1').querySelectorAll('.icon-face');
-var iconNumber = 0, firstTime = true, timeAnimation = 0;
-
-iconRotation();
+/*const iconAnimated = document.querySelector('.icon-animated-1').querySelectorAll('.icon-face');
+var iconNumber = 0, firstTime = true, timeAnimation = 0;*/
 
 /*function iconRotation() {
     if (firstTime){
@@ -93,8 +91,12 @@ var x = setInterval(function() {
     });
 
     // Display the result in an element with id="demo"
-    document.getElementById("countdown-next-month").innerHTML = days + " : " +
-        hours + " : " + minutes + " : " + seconds + "";
+    /*document.getElementById("countdown-next-month").innerHTML = days + " : " +
+        hours + " : " + minutes + " : " + seconds + "";*/
+    document.getElementById("countdown-day").innerHTML = days;
+    document.getElementById("countdown-hour").innerHTML = hours;
+    document.getElementById("countdown-minute").innerHTML = minutes;
+    document.getElementById("countdown-seconde").innerHTML = seconds;
 
     // If the count down is finished, write some text
     if (distance < 0) {

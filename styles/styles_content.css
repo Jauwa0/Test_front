@@ -6,7 +6,7 @@
 
 .bloc-content {
     margin: 0; /* 3% 0 5% 0 */
-    padding: 4rem 2rem;
+    padding: 6rem 2rem 3rem 2rem;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -51,7 +51,12 @@
         transition: all 0.5s linear;
     }
 
+    .usp {
+        padding: 0;
+    }
+
     .partie-gauche {
+        margin-top: 3rem;
         margin-bottom: 2rem;
     }
 }
@@ -64,23 +69,6 @@
     width: 100%;
     text-align: center;
     padding: 1rem 0;
-}
-
-.bloc-content-timer {
-    margin: 5% 0 5% 0;
-    padding: 5% 0 5% 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    outline: 2px solid #8D8E72;
-
-    background-image: linear-gradient(90deg, rgba(0,0,0,0.5) 55%, rgba(0,0,0,0.3) 100%),
-    url("../pictures/weapon.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .bloc-content-title {
@@ -157,6 +145,38 @@
 .card-concept-text {
     padding: 0px 0 0 25px;
     color: white;
+}
+
+/* TIMER */
+
+.bloc-content-timer {
+    padding-top: 3rem;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#countdown-next-month {
+    font-family: "fontTimer";
+    font-variant-numeric: tabular-nums ;
+    font-size: 4rem;
+    letter-spacing: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+.countdown-next-month-column {
+    border-inline: solid 1px rgba(255, 255, 255, 0.5);
+}
+
+.countdown-next-month-column div {
+    text-align: center;
+    margin: 0 2rem;
+}
+
+.countdown-text {
+    padding-top: 0.5rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
 }
 
 /* COLLAPS */
