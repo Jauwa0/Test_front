@@ -141,6 +141,10 @@
     text-decoration: underline;
 }
 
+.white-space {
+    white-space: nowrap;
+}
+
 /* FORMULAIRE DE CONTACT */
 
 .form-contact {

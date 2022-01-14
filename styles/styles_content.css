@@ -17,10 +17,6 @@
     transition: all 0.5s linear;
 }
 
-.wrap {
-    flex-wrap: wrap;
-}
-
 .partie-gauche {
     width: 50%;
     max-width: 525px;
@@ -44,21 +40,18 @@
     z-index: 1;
 }
 
-@media screen and (max-width: 1024px) {
-    .bloc-content {
-        padding-inline: 0;
-        flex-wrap: wrap;
-        transition: all 0.5s linear;
-    }
+.wrap {
+    flex-wrap: wrap;
+}
 
-    .usp {
-        padding: 0;
-    }
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
 
-    .partie-gauche {
-        margin-top: 3rem;
-        margin-bottom: 2rem;
-    }
+.flex-column {
+    display: flex;
+    flex-direction: column;
 }
 
 .bloc-text-center {
@@ -92,6 +85,7 @@
 /* USP */
 .usp{
     min-height: 100vh;
+    padding: 0;
     justify-content: flex-start;
 
     /* linear-gradient(90deg, rgba(0,0,0,0.5) 55%, rgba(0,0,0,0.3) 100%) */
@@ -108,6 +102,20 @@
     -webkit-backdrop-filter: blur(0.5rem);
     backdrop-filter: blur(0.5rem);
     /*min-width: 300px;*/
+}
+
+@media screen and (max-width: 1024px) {
+    .bloc-content {
+        padding-left: 0;
+        padding-right: 0;
+        flex-wrap: wrap;
+        transition: all 0.5s linear;
+    }
+
+    .partie-gauche {
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
 }
 
 /* CONCEPT */
@@ -150,21 +158,28 @@
 /* TIMER */
 
 .bloc-content-timer {
-    padding-top: 3rem;
+    padding: 2rem 2rem 10rem 2rem;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
 }
 
 #countdown-next-month {
     font-family: "fontTimer";
-    font-variant-numeric: tabular-nums ;
+    font-variant-numeric: tabular-nums;
     font-size: 4rem;
     letter-spacing: 5px;
+}
+
+#countdown-next-month, #countdown-next-month > div {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .countdown-next-month-column {
+    margin: 0.5rem 0;
     border-inline: solid 1px rgba(255, 255, 255, 0.5);
 }
 
@@ -177,6 +192,36 @@
     padding-top: 0.5rem;
     font-size: 1rem;
     letter-spacing: 1px;
+}
+
+@media screen and (max-width: 480px){
+    .bloc-content-timer {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    #countdown-next-month {
+        font-size: 2rem;
+        letter-spacing: 0.1rem;
+    }
+
+    #countdown-next-month, #countdown-next-month > div {
+        flex-wrap: nowrap;
+    }
+
+    .countdown-next-month-column {
+        border-inline: none;
+    }
+
+    .countdown-next-month-column div {
+        margin: 0.5rem;
+    }
+
+    .countdown-text {
+        padding-top: 0.2rem;
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+    }
 }
 
 /* COLLAPS */
