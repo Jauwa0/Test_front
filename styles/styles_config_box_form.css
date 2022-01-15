@@ -2,7 +2,6 @@
 
 .config-box-content {
     position: relative;
-    min-height: 100vh;
     justify-content: center;
 
     background: url("../pictures/backgrounds/forest_mist_bis.png"); /*linear-gradient(180deg, rgba(0,0,0,0.5) 00px, rgba(255,255,255,0) 26px), linear-gradient(0deg, rgba(0,0,0,0.5) 00px, rgba(255,255,255,0) 26px),*/
@@ -12,7 +11,8 @@
 }
 
 .config-box-partie-gauche {
-    position: relative;
+    position: sticky;
+    top: 15%;
     width: 50%;
 }
 
@@ -63,10 +63,22 @@
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
+    text-decoration: none;
 }
 
-.link-icon-form {
-    text-decoration: none;
+.container-icon-form {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* hider the browser's default radio button */
+.container-icon-form input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
 }
 
 .icon-form {
@@ -77,19 +89,19 @@
     border-radius: 5px;
 }
 
-.icon-form:hover {
+.container-icon-form:hover input ~ .icon-form{
     border: 1px solid rgba(141,142,114,0.75);
     outline: 1px solid rgba(141,142,114,0.75);
 }
 
-.icon-form-active {
+.container-icon-form input:checked ~ .icon-form /*.icon-form-active*/ {
     border: 1px solid rgba(141,142,114,0.75);
     outline: 1px solid rgba(141,142,114,0.75);
 }
 
 .icon-form img {
-    height: 35px;
-    width: 35px;
+    height: 3.5rem; /* 35px */
+    width: 3.5rem;
 }
 
 .icon-form p {
@@ -147,54 +159,25 @@
     display: none;
 }
 
-/* MOUSE SCROLL */
-#mouse-scrolldown {
-    --color: white;
-    --sizeX: 30px;
-    --sizeY: 50px;
-    position: absolute;
-    width: var(--sizeX);
-    height: var(--sizeY);
-    margin-left: calc(var(--sizeX)/2);
-    border: calc(var(--sizeX) / 10) solid var(--color);
-    border-radius: 50px;
-    box-sizing: border-box;
-    margin-bottom: 16px;
+/* OTHERS */
 
-    bottom: 0;
+.link-js {
+    font-size: 0.9em;
+    padding-top: 1rem;
+    padding-left: 25px;
 }
 
-#mouse-scrolldown::before {
-    content: "";
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    width: 6px;
-    height: 6px;
-    margin-left: -3px;
-    background-color: var(--color);
-    border-radius: 100%;
-    animation: scrolldown-anim 2s infinite;
-    box-sizing: border-box;
-    box-shadow: 0px -5px 3px 1px #ffffff66;
+.link-js:hover, .link-js:active {
+    color: #8D8E72;
 }
 
-@keyframes scrolldown-anim {
-    0% {
-        opacity: 0;
-        height: 6px;
-    }
-    40% {
-        opacity: 1;
-        height: 10px;
-    }
-    80% {
-        transform: translate(0, 20px);
-        height: 10px;
-        opacity: 0;
-    }
-    100% {
-        height: 3px;
-        opacity: 0;
-    }
+#text-prix-box-form {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 0.5em 0;
+}
+
+.text-prix {
+    font-size: 0.5em;
+    font-weight: normal;
 }

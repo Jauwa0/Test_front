@@ -192,10 +192,6 @@
     <!-- PARTIE 5 - PERSONNALISATION BOX -->
     <div class="bloc-content config-box-content">
 
-        <!-- ICON MOUSE SCROLL -->
-        <div id='mouse-scrolldown'>
-        </div>
-
         <div class="config-box-partie-gauche">
             <img src="./pictures/table-airsoft.png" alt="Visu box" class="picture-base">
             <img src="./pictures/table-airsoft-calc.png" alt="Visu box" class="picture-superieure">
@@ -204,84 +200,128 @@
         <div class="config-box-partie-droite">
             <h2>COLIS STRATÉGIQUE</h2>
 
-            <div id="text-prix-box-form" class="text-prix">35,99 €</div>
+            <div id="text-prix-box-form">35,99 €</div>
 
             <!-- CONSO PRINCIPAL -->
             <div class="config-box-produit-content">
                 <p><b>Consommable principal</b></p>
-                <div id="list-icon-form-1-1" class="list-icon-form">
-                    <div onclick="displayBoxDetails(1,1)" class="icon-form">
-                        <img src="pictures/icons/plastic-bag-black.png" alt="icon sachet de billes">
-                        <p>BBs</p>
-                    </div>
-                    <div onclick="displayBoxDetails(1,2)" class="icon-form">
-                        <img src="pictures/icons/gas-bottle-black.png" alt="icon bouteille gaz">
-                        <p>GAZ</p>
-                    </div>
-                    <div onclick="displayBoxDetails(1,3)" class="icon-form">
-                        <img src="pictures/icons/gas-bottle-black.png" alt="icon capsules co2">
-                        <p>CO2</p>
-                    </div>
+                <div id="list-icon-form-1" class="list-icon-form">
+                    <label class="container-icon-form">
+                        <input type="radio" name="conso-1">
+                        <div onclick="displayBoxDetails(1,1)" class="icon-form">
+                            <img src="pictures/icons/form/sachet_bille+billes_noir.png" alt="icon sachet de billes">
+                            <p>BBs</p>
+                        </div>
+                    </label>
+                    <label class="container-icon-form">
+                        <input type="radio" name="conso-1">
+                        <div onclick="displayBoxDetails(1,2)" class="icon-form">
+                            <img src="pictures/icons/form/bouteille_gaz_noir.png" alt="icon bouteille gaz">
+                            <p>GAZ</p>
+                        </div>
+                    </label>
+                    <label class="container-icon-form">
+                        <input type="radio" name="conso-1">
+                        <div onclick="displayBoxDetails(1,3)" class="icon-form">
+                            <img src="pictures/icons/form/capsule_co2_coir.png" alt="icon capsules co2">
+                            <p>CO2</p>
+                        </div>
+                    </label>
                 </div>
 
                 <!-- DETAILS BILLES -->
-                <div id="list-icon-form-2-1" class="config-box-details">
+                <div id="list-icon-form-detail-1-1" class="config-box-details">
                     <div class="list-icon-form">
-                        <div class="icon-form">
-                            <p>0,20g</p>
-                        </div>
-                        <div class="icon-form">
-                            <p>0,25g</p>
-                        </div>
-                        <div class="icon-form">
-                            <p>0,28g</p>
-                        </div>
-                        <div class="icon-form">
-                            <p>0,32g</p>
-                        </div>
+                        <label class="container-icon-form">
+                            <input type="radio" name="conso-1-detail">
+                            <div class="icon-form">
+                                <p>0,20g</p>
+                            </div>
+                        </label>
+                        <label class="container-icon-form">
+                            <input type="radio" name="conso-1-detail">
+                            <div class="icon-form">
+                                <p>0,25g</p>
+                            </div>
+                        </label>
+                        <label class="container-icon-form">
+                            <input type="radio" name="conso-1-detail">
+                            <div class="icon-form">
+                                <p>0,28g</p>
+                            </div>
+                        </label>
+                        <label class="container-icon-form">
+                            <input type="radio" name="conso-1-detail">
+                            <div class="icon-form">
+                                <p>0,32g</p>
+                            </div>
+                        </label>
                     </div>
                     <!-- PAGE D'AIDE -->
-                    <a href="" class="link config-box-details-billes">Que choisir ?</a>
+                    <a href="" class="link">Que choisir ?</a>
                 </div>
 
                 <!-- DETAILS GAZ -->
-                <div id="list-icon-form-2-2" class="config-box-details">
+                <div id="list-icon-form-detail-1-2" class="config-box-details">
                     <div class="list-icon-form">
-                        <div class="icon-form">
-                            <p>130 PSI sec</p>
-                        </div>
-                        <div class="icon-form">
-                            <p>130 PSI lubrifié</p>
-                        </div>
-                        <div class="icon-form">
-                            <p>150 PSI sec</p>
-                        </div>
-                        <div class="icon-form">
-                            <p>150 PSI lubrifié</p>
-                        </div>
+                        <label class="container-icon-form">
+                            <input type="radio" name="conso-1-detail">
+                            <div class="icon-form">
+                                <p>130 PSI sec</p>
+                            </div>
+                        </label>
+                        <label class="container-icon-form">
+                            <input type="radio" name="conso-1-detail">
+                            <div class="icon-form">
+                                <p>130 PSI lubrifié</p>
+                            </div>
+                        </label>
+                        <label class="container-icon-form">
+                            <input type="radio" name="conso-1-detail">
+                            <div class="icon-form">
+                                <p>150 PSI sec</p>
+                            </div>
+                        </label>
+                        <label class="container-icon-form">
+                            <input type="radio" name="conso-1-detail">
+                            <div class="icon-form">
+                                <p>150 PSI lubrifié</p>
+                            </div>
+                        </label>
                     </div>
                     <!-- PAGE D'AIDE -->
-                    <a href="" class="link config-box-details-billes">Que choisir ?</a>
+                    <a href="" class="link">Que choisir ?</a>
                 </div>
 
                 <!-- DETAILS CO2 -->
-                <div id="list-icon-form-2-3" class="config-box-details">
-                    <div class="list-icon-form">
+                <div id="list-icon-form-detail-1-3" class="config-box-details">
+                    <label class="container-icon-form">
+                        <input type="radio" name="conso-1-detail">
                         <div class="icon-form">
-                            <p>x 5</p>
+                            <p>130 PSI sec</p>
                         </div>
+                    </label>
+                    <label class="container-icon-form">
+                        <input type="radio" name="conso-1-detail">
                         <div class="icon-form">
-                            <p>x 10</p>
+                            <p>130 PSI lubrifié</p>
                         </div>
+                    </label>
+                    <label class="container-icon-form">
+                        <input type="radio" name="conso-1-detail">
                         <div class="icon-form">
-                            <p>x 20</p>
+                            <p>150 PSI sec</p>
                         </div>
-                    </div>
+                    </label>
+                    <label class="container-icon-form">
+                        <input type="radio" name="conso-1-detail">
+                        <div class="icon-form">
+                            <p>150 PSI lubrifié</p>
+                        </div>
+                    </label>
                     <!-- PAGE D'AIDE -->
-                    <a href="" class="link config-box-details-billes">Que choisir ?</a>
+                    <a href="" class="link">Que choisir ?</a>
                 </div>
-
-
 
                 <!-- AJOUT CONSOMMABLE -->
                 <p id="button-add-consommable" onclick="addConsommableBoxForm()" class="link-js">

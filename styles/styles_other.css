@@ -117,21 +117,6 @@
     margin-left: -15px;
 }
 
-.link-js {
-    font-size: 0.9em;
-    padding-top: 15px;
-    padding-left: 25px;
-}
-
-.link-js:hover, .link-js:active {
-    color: #8D8E72;
-}
-
-.text-prix {
-    font-size: 1.4em;
-    margin: 1em 0;
-}
-
 .link {
     text-decoration: none;
     color: #8D8E72;

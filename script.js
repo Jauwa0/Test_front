@@ -111,43 +111,43 @@ var x = setInterval(function() {
 
 /* --- PRIMARY --- */
 function displayBoxDetails(numberList, numberGroupDetail) {
-    /* Hidden border */
-    var idListIcon = "list-icon-form-" + numberList + "-1";
-    console.log('idListIcon = ' + idListIcon);
-    var mainIcons = document.getElementById(idListIcon);
-    console.log("mainIcons = " + mainIcons);
-
-    for(var i = 0; i < mainIcons.length; i++){
-        mainIcons.querySelector('list-icon-form')[i].classList.remove('icon-form-active');
-    }
-
-    console.log("Display border - numberGroupDetail-1 = " +  (numberGroupDetail-1));
-    /* Display border */
-    mainIcons.querySelector('list-icon-form')[(numberGroupDetail-1)].classList.add('icon-form-active');
-    console.log("mainIcons.querySelect = " + mainIcons.querySelector('list-icon-form')[(numberGroupDetail-1)]);
 
     /* Hidden all secondary icons */
-    var idSearch = "list-icon-form-" + (numberList+1);
-    $('*[id=idSearch]').style.setProperty('display', 'none');
+    var idSearch = "list-icon-form-detail-" + numberList;
+    var reqSearch = "[id^=" + idSearch + "]";
+    var children = document.querySelectorAll(reqSearch);
+
+    console.log("idSearch = " + idSearch);
+    console.log('Children length = ' + children.length);
+
+    /* Hide all */
+    children.forEach( child => {
+        child.style.display = "none";
+        console.log("child = " + child);
+    });
+
+    /* Show selection */
+    document.getElementById("list-icon-form-detail-" + numberList + "-" + numberGroupDetail)
+        .style.setProperty('display', 'block');
 
     /* Display selection */
-    var idListIconSecondary = "list-icon-form-" + (numberList+1) + "-" + numberGroupDetail;
+    /*var idListIconSecondary = "list-icon-form-detail-" + numberList + "-" + numberGroupDetail;
     var secondaryIcons = document.getElementById(idListIconSecondary);
-    secondaryIcons.style.setProperty('display', 'inherit');
+    secondaryIcons.style.setProperty('display', 'inherit');*/
 }
 
 /* --- SECONDARY --- */
-function displayBoxDetailsSupp(detailsGroup) {
+/*function displayBoxDetailsSupp(detailsGroup) {
     /* Hidden all */
-    var contentStyle = document.getElementsByClassName("config-box-details-supp");
+    /*var contentStyle = document.getElementsByClassName("config-box-details-supp");
     for(var i = 0; i < contentStyle.length; i++){
         contentStyle[i].style.setProperty('display', 'none');
     }
 
     /* Show */
-    var elemStyle = document.getElementsByClassName("config-box-details-supp")[detailsGroup];
+    /*var elemStyle = document.getElementsByClassName("config-box-details-supp")[detailsGroup];
     elemStyle.style.setProperty('display', 'inherit');
-}
+}*/
 
 /* --- --- */
 
