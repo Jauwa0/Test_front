@@ -205,24 +205,24 @@
             <!-- CONSO PRINCIPAL -->
             <div class="config-box-produit-content">
                 <p><b>Consommable principal</b></p>
-                <div id="list-icon-form-1" class="list-icon-form">
+                <div class="list-icon-form">
                     <label class="container-icon-form">
                         <input type="radio" name="conso-1">
-                        <div onclick="displayBoxDetails(1,1)" class="icon-form">
-                            <img src="pictures/icons/form/sachet_bille+billes_noir.png" alt="icon sachet de billes">
+                        <div onclick="displayBoxDetails(1,1)" id="list-icon-form-img-1-1" class="icon-form">
+                            <img src="pictures/icons/form/sachet_bille_noir.png" alt="icon sachet de billes">
                             <p>BBs</p>
                         </div>
                     </label>
                     <label class="container-icon-form">
                         <input type="radio" name="conso-1">
-                        <div onclick="displayBoxDetails(1,2)" class="icon-form">
+                        <div onclick="displayBoxDetails(1,2)" id="list-icon-form-img-1-2" class="icon-form">
                             <img src="pictures/icons/form/bouteille_gaz_noir.png" alt="icon bouteille gaz">
                             <p>GAZ</p>
                         </div>
                     </label>
                     <label class="container-icon-form">
                         <input type="radio" name="conso-1">
-                        <div onclick="displayBoxDetails(1,3)" class="icon-form">
+                        <div onclick="displayBoxDetails(1,3)" id="list-icon-form-img-1-3" class="icon-form">
                             <img src="pictures/icons/form/capsule_co2_coir.png" alt="icon capsules co2">
                             <p>CO2</p>
                         </div>
@@ -258,7 +258,7 @@
                         </label>
                     </div>
                     <!-- PAGE D'AIDE -->
-                    <a href="" class="link">Que choisir ?</a>
+                    <a href="" class="link" style="padding-left: 25px">Que choisir ?</a>
                 </div>
 
                 <!-- DETAILS GAZ -->
@@ -290,37 +290,33 @@
                         </label>
                     </div>
                     <!-- PAGE D'AIDE -->
-                    <a href="" class="link">Que choisir ?</a>
+                    <a href="" class="link" style="padding-left: 25px">Que choisir ?</a>
                 </div>
 
                 <!-- DETAILS CO2 -->
                 <div id="list-icon-form-detail-1-3" class="config-box-details">
-                    <label class="container-icon-form">
-                        <input type="radio" name="conso-1-detail">
-                        <div class="icon-form">
-                            <p>130 PSI sec</p>
-                        </div>
-                    </label>
-                    <label class="container-icon-form">
-                        <input type="radio" name="conso-1-detail">
-                        <div class="icon-form">
-                            <p>130 PSI lubrifié</p>
-                        </div>
-                    </label>
-                    <label class="container-icon-form">
-                        <input type="radio" name="conso-1-detail">
-                        <div class="icon-form">
-                            <p>150 PSI sec</p>
-                        </div>
-                    </label>
-                    <label class="container-icon-form">
-                        <input type="radio" name="conso-1-detail">
-                        <div class="icon-form">
-                            <p>150 PSI lubrifié</p>
-                        </div>
-                    </label>
+                    <div class="list-icon-form">
+                        <label class="container-icon-form">
+                            <input type="radio" name="conso-1-detail">
+                            <div class="icon-form">
+                                <p>x 5</p>
+                            </div>
+                        </label>
+                        <label class="container-icon-form">
+                            <input type="radio" name="conso-1-detail">
+                            <div class="icon-form">
+                                <p>x 10</p>
+                            </div>
+                        </label>
+                        <label class="container-icon-form">
+                            <input type="radio" name="conso-1-detail">
+                            <div class="icon-form">
+                                <p>x 15</p>
+                            </div>
+                        </label>
+                    </div>
                     <!-- PAGE D'AIDE -->
-                    <a href="" class="link">Que choisir ?</a>
+                    <a href="" class="link" style="padding-left: 25px">Que choisir ?</a>
                 </div>
 
                 <!-- AJOUT CONSOMMABLE -->
@@ -334,103 +330,126 @@
             <div id="config-box-conso-supplementaire" class="config-box-produit-content">
                 <p><b>Consommable supplémentaire</b></p>
                 <div class="list-icon-form">
-                    <div onclick="displayBoxDetailsSupp(0)" class="icon-form">
-                        <img src="pictures/icons/plastic-bag-black.png" alt="icon sachet de billes">
-                        <p>BBs</p>
-                    </div>
-                    <div onclick="displayBoxDetailsSupp(1)" class="icon-form">
-                        <img src="pictures/icons/gas-bottle-black.png" alt="icon bouteille gaz">
-                        <p>GAZ</p>
-                    </div>
-                    <div onclick="displayBoxDetailsSupp(2)" class="icon-form">
-                        <img src="pictures/icons/gas-bottle-black.png" alt="icon capsules co2">
-                        <p>CO2</p>
-                    </div>
+                    <label class="container-icon-form">
+                        <input type="radio" name="conso-2">
+                        <div onclick="displayBoxDetails(2,1)" class="icon-form">
+                            <img src="pictures/icons/form/sachet_bille_noir.png" alt="icon sachet de billes">
+                            <p>BBs</p>
+                        </div>
+                    </label>
+                    <label class="container-icon-form">
+                        <input type="radio" name="conso-2">
+                        <div onclick="displayBoxDetails(2,2)" class="icon-form">
+                            <img src="pictures/icons/form/bouteille_gaz_noir.png" alt="icon bouteille gaz">
+                            <p>GAZ</p>
+                        </div>
+                    </label>
+                    <label class="container-icon-form">
+                        <input type="radio" name="conso-2">
+                        <div onclick="displayBoxDetails(2,3)" class="icon-form">
+                            <img src="pictures/icons/form/capsule_co2_coir.png" alt="icon capsules co2">
+                            <p>CO2</p>
+                        </div>
+                    </label>
                 </div>
 
                 <!-- DETAILS BILLES -->
-                <div class="config-box-details-supp">
+                <div id="list-icon-form-detail-2-1" class="config-box-details">
                     <div class="list-icon-form">
-                        <a href="" class="link-icon-form">
+                        <label class="container-icon-form">
+                            <input type="radio" name="conso-2-detail">
                             <div class="icon-form">
                                 <p>0,20g</p>
                             </div>
-                        </a>
-                        <a href="" class="link-icon-form">
+                        </label>
+                        <label class="container-icon-form">
+                            <input type="radio" name="conso-2-detail">
                             <div class="icon-form">
                                 <p>0,25g</p>
                             </div>
-                        </a>
-                        <a href="" class="link-icon-form">
+                        </label>
+                        <label class="container-icon-form">
+                            <input type="radio" name="conso-2-detail">
                             <div class="icon-form">
                                 <p>0,28g</p>
                             </div>
-                        </a>
-                        <a href="" class="link-icon-form">
+                        </label>
+                        <label class="container-icon-form">
+                            <input type="radio" name="conso-2-detail">
                             <div class="icon-form">
                                 <p>0,32g</p>
                             </div>
-                        </a>
+                        </label>
                     </div>
+                    <!-- PAGE D'AIDE -->
+                    <a href="" class="link" style="padding-left: 25px">Que choisir ?</a>
                 </div>
 
                 <!-- DETAILS GAZ -->
-                <div class="config-box-details-supp">
+                <div id="list-icon-form-detail-2-2" class="config-box-details">
                     <div class="list-icon-form">
-                        <a href="" class="link-icon-form">
+                        <label class="container-icon-form">
+                            <input type="radio" name="conso-2-detail">
                             <div class="icon-form">
-                                <p>130 PIS sec</p>
+                                <p>130 PSI sec</p>
                             </div>
-                        </a>
-                        <a href="" class="link-icon-form">
+                        </label>
+                        <label class="container-icon-form">
+                            <input type="radio" name="conso-2-detail">
                             <div class="icon-form">
                                 <p>130 PSI lubrifié</p>
                             </div>
-                        </a>
-                        <a href="" class="link-icon-form">
+                        </label>
+                        <label class="container-icon-form">
+                            <input type="radio" name="conso-2-detail">
                             <div class="icon-form">
-                                <p>150 PIS sec</p>
+                                <p>150 PSI sec</p>
                             </div>
-                        </a>
-                        <a href="" class="link-icon-form">
+                        </label>
+                        <label class="container-icon-form">
+                            <input type="radio" name="conso-2-detail">
                             <div class="icon-form">
                                 <p>150 PSI lubrifié</p>
                             </div>
-                        </a>
+                        </label>
                     </div>
+                    <!-- PAGE D'AIDE -->
+                    <a href="" class="link" style="padding-left: 25px">Que choisir ?</a>
                 </div>
 
                 <!-- DETAILS CO2 -->
-                <div class="config-box-details-supp">
+                <div id="list-icon-form-detail-2-3" class="config-box-details">
                     <div class="list-icon-form">
-                        <a href="" class="link-icon-form">
+                        <label class="container-icon-form">
+                            <input type="radio" name="conso-2-detail">
                             <div class="icon-form">
-                                <p>&nbsp5 capsules</p>
+                                <p>x 5</p>
                             </div>
-                        </a>
-                        <a href="" class="link-icon-form">
+                        </label>
+                        <label class="container-icon-form">
+                            <input type="radio" name="conso-2-detail">
                             <div class="icon-form">
-                                <p>10 capsules</p>
+                                <p>x 10</p>
                             </div>
-                        </a>
-                        <a href="" class="link-icon-form">
+                        </label>
+                        <label class="container-icon-form">
+                            <input type="radio" name="conso-2-detail">
                             <div class="icon-form">
-                                <p>15 capsules</p>
+                                <p>x 15</p>
                             </div>
-                        </a>
-                        <a href="" class="link-icon-form">
-                            <div class="icon-form">
-                                <p>20 capsules</p>
-                            </div>
-                        </a>
+                        </label>
                     </div>
+                    <!-- PAGE D'AIDE -->
+                    <a href="" class="link" style="padding-left: 25px">Que choisir ?</a>
                 </div>
 
-                <div>
-                    <input type="checkbox" id="inclued-product" name="inclued-product">
-                    <label for="inclued-product">Inclure ce consommable dans chaque box <br>(applicable pour l'abonnement)</label>
+                <!-- CHECKBOX INCLUED IN SUBSCRIB -->
+                <div style="margin-top: 1rem; padding-left: 25px">
+                    <input type="checkbox" id="inclued-in-subscription" name="inclued-in-subscription">
+                    <label for="inclued-in-subscription">Inclure ce consommable dans chaque box <br>(applicable pour l'abonnement)</label>
                 </div>
 
+                <!-- DELETE CONSOMMABLE SUPPLEMENTAIRE -->
                 <p id="button-delete-consommable" onclick="deleteConsommableBoxForm()" class="link-js">
                     <img src="./pictures/minus.png" alt="icon supprimer un consommable" class="icon-text">
                     Supprimer ce consommable
@@ -438,39 +457,44 @@
             </div>
 
             <!-- CAMO -->
-            <div class="config-box-produit-content">
+            <div id="config-box-camo" class="config-box-produit-content">
                 <p><b>Camouflage de préférence</b></p>
-                <!-- => Camouflage <br>
-                    selection camo <br>
-                #131615 black <br>
-                #6c6641 green <br>
-                camo CE <br>
-                US ARMY <br>
-                Russian ARMY <br> -->
+
                 <div class="list-icon-form">
-                    <a href="" class="link-icon-form">
-                        <div class="icon-form-camo camo-black"></div>
-                    </a>
-                    <a href="" class="link-icon-form">
-                        <div class="icon-form-camo camo-green">
-                        </div>
-                    </a>
-                    <a href="" class="link-icon-form">
-                        <div class="icon-form-camo">
+                    <label class="container-icon-form">
+                        <input type="radio" name="camo">
+                        <div onclick="selectCamo(0)" class="icon-form-camo camo-black"></div>
+                    </label>
+                    <label class="container-icon-form">
+                        <input type="radio" name="camo">
+                        <div onclick="selectCamo(1)" class="icon-form-camo camo-green"></div>
+                    </label>
+                    <label class="container-icon-form">
+                        <input type="radio" name="camo">
+                        <div onclick="selectCamo(2)" class="icon-form-camo">
                             <img src="./pictures/camo-ce.jpg" alt="camouflage CE">
                         </div>
-                    </a>
-                    <a href="" class="link-icon-form">
-                        <div class="icon-form-camo">
+                    </label>
+                    <label class="container-icon-form">
+                        <input type="radio" name="camo">
+                        <div onclick="selectCamo(3)" class="icon-form-camo">
                             <img src="./pictures/camo-usa-army.jpg" alt="camouflage usa">
                         </div>
-                    </a>
-                    <a href="" class="link-icon-form">
-                        <div class="icon-form-camo">
+                    </label>
+                    <label class="container-icon-form">
+                        <input type="radio" name="camo">
+                        <div onclick="selectCamo(4)" class="icon-form-camo">
                             <img src="./pictures/camo-russian-army.jpg" alt="camouflage russian">
                         </div>
-                    </a>
+                    </label>
                 </div>
+
+                <!-- CHECKBOX NO PREFERENCE -->
+                <div style="margin-top: 1rem; padding-left: 25px">
+                    <input onclick="selectCamo(-1)" type="radio" id="no-camo-preference" name="camo">
+                    <label for="no-camo-preference">Aucune préférence</label>
+                </div>
+
             </div>
 
             <!-- BUTTON ACHETER -->

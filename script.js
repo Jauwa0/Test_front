@@ -109,7 +109,6 @@ var x = setInterval(function() {
 
 // BUTTON FORMULAIRE CONFIG BOX
 
-/* --- PRIMARY --- */
 function displayBoxDetails(numberList, numberGroupDetail) {
 
     /* Hidden all secondary icons */
@@ -117,41 +116,39 @@ function displayBoxDetails(numberList, numberGroupDetail) {
     var reqSearch = "[id^=" + idSearch + "]";
     var children = document.querySelectorAll(reqSearch);
 
-    console.log("idSearch = " + idSearch);
-    console.log('Children length = ' + children.length);
+    //console.log("idSearch = " + idSearch);
+    //console.log('Children length = ' + children.length);
 
     /* Hide all */
     children.forEach( child => {
         child.style.display = "none";
-        console.log("child = " + child);
+        //console.log("child = " + child);
     });
 
     /* Show selection */
     document.getElementById("list-icon-form-detail-" + numberList + "-" + numberGroupDetail)
         .style.setProperty('display', 'block');
 
-    /* Display selection */
-    /*var idListIconSecondary = "list-icon-form-detail-" + numberList + "-" + numberGroupDetail;
-    var secondaryIcons = document.getElementById(idListIconSecondary);
-    secondaryIcons.style.setProperty('display', 'inherit');*/
 }
 
-/* --- SECONDARY --- */
-/*function displayBoxDetailsSupp(detailsGroup) {
-    /* Hidden all */
-    /*var contentStyle = document.getElementsByClassName("config-box-details-supp");
-    for(var i = 0; i < contentStyle.length; i++){
-        contentStyle[i].style.setProperty('display', 'none');
-    }
+function selectCamo(indiceSelected) {
+    /* hide other camo that this checked */
+    var childCamo = document.querySelector('[id="config-box-camo"]');
+    var childIcon = childCamo.querySelectorAll('.icon-form-camo');
 
-    /* Show */
-    /*var elemStyle = document.getElementsByClassName("config-box-details-supp")[detailsGroup];
-    elemStyle.style.setProperty('display', 'inherit');
-}*/
+    for(var i = 0 ; i < childIcon.length ; i++) {
+        if (i != indiceSelected) { childIcon[i].style.opacity = 0.5 }
+        else { childIcon[i].style.opacity = 1 }
+    }
+}
 
 /* --- --- */
 
 function addConsommableBoxForm() {
+    // TODO
+    // if conso-1 et conso-1-detail
+    // sinon afficher tooltips
+
     document.getElementById("button-add-consommable")
         .style.setProperty('display', 'none');
 
@@ -160,9 +157,32 @@ function addConsommableBoxForm() {
 }
 
 function deleteConsommableBoxForm() {
+    /* RADIO CHECKED FALSE SECONDARY CONSUMABLE */
+    /* CONSUMABLE */
+    var childConso = document.querySelector('input[name=conso-2]:checked');
+    if(childConso) { childConso.checked = false; }
+    /* DETAIL */
+    var childConsoDetail = document.querySelector('input[name=conso-2-detail]:checked');
+    if(childConsoDetail) { childConsoDetail.checked = false; }
+
+    /* HIDE ALL SECONDARY ICONS */
+    var idSearch = "list-icon-form-detail-2";
+    var reqSearch = "[id^=" + idSearch + "]";
+    var children = document.querySelectorAll(reqSearch);
+    /* Hide all */
+    children.forEach( child => {
+        child.style.display = "none";
+    });
+
+    /* HIDE CHECKBOX "INCLUE IN SUBSCRIPTION" */
+    var childIncluedSub = document.querySelector('input[name=inclued-in-subscription]');
+    childIncluedSub.checked = false;
+
+    /* SHOW BUTTON "ADD CONSO" */
     document.getElementById("button-add-consommable")
         .style.setProperty('display', 'inherit');
 
+    /* HIDE BUTTON "DELETE CONSO" */
     document.getElementById("config-box-conso-supplementaire")
         .style.setProperty('display', 'none');
 }
