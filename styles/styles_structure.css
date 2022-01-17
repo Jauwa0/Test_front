@@ -8,6 +8,15 @@
     src: url("../Fonts/Montserrat-Regular.ttf");
 }
 
+:root {
+    --main-color: #8D8E72;
+    --secondary-color: #EA820B;
+
+    --font-color: #fff;
+
+    --background-color: #060301;
+}
+
 html, body {
     font-family: "mainFont";
     height: 100%;
@@ -37,7 +46,7 @@ h2 {
 h3 {
     font-size: 1.33em;
     letter-spacing: 1px;
-    color: #8D8E72;
+    color: var(--main-color);
 }
 
 p {
@@ -81,7 +90,7 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #ffffff;
+    color: var(--font-color);
     overflow: hidden;
     z-index: 51;
 
@@ -182,7 +191,7 @@ ul {
     }
 
     .primary-navigation-1:hover {
-        color: #8D8E72;
+        color: var(--main-color);
     }
 
     .mobile-nav-toggle {

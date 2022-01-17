@@ -157,6 +157,9 @@ function addConsommableBoxForm() {
 }
 
 function deleteConsommableBoxForm() {
+    var consoSupplementaire = document.querySelector('#config-box-conso-supplementaire');
+    consoSupplementaire.classList.remove('config-box-active');
+
     /* RADIO CHECKED FALSE SECONDARY CONSUMABLE */
     /* CONSUMABLE */
     var childConso = document.querySelector('input[name=conso-2]:checked');

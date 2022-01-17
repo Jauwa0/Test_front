@@ -5,13 +5,24 @@
     justify-content: center;
 
     background: url("../pictures/backgrounds/forest_mist_bis.png"); /*linear-gradient(180deg, rgba(0,0,0,0.5) 00px, rgba(255,255,255,0) 26px), linear-gradient(0deg, rgba(0,0,0,0.5) 00px, rgba(255,255,255,0) 26px),*/
+    /*background: linear-gradient(90deg, rgba(141,142,114,1) 0%, rgba(132,133,108,1) 21%, rgba(61,64,59,1) 96%);*/
+
+    /*background: rgb(67,67,67);
+    background: radial-gradient(circle, rgba(67,67,67,1) 0%, rgba(6,3,1,1) 100%);*/
+
+    /*background: rgb(6,3,1);
+    background: linear-gradient(90deg, rgba(6,3,1,1) 0%, rgba(67,67,67,1) 40%, rgba(67,67,67,1) 70%, rgba(6,3,1,1) 100%);*/
+
+    /*background: rgb(153,97,68);
+    background: linear-gradient(90deg, rgba(153,97,68,1) 0%, rgba(90,41,16,1) 100%);
+
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center;*/
 }
 
 .config-box-partie-gauche {
-    position: sticky;
+    position: relative;
     top: 15%;
     width: 50%;
 }
@@ -53,6 +64,10 @@
 
 #config-box-conso-supplementaire {
     display: none;
+}
+
+@media screen and (max-width: 910px) {
+    
 }
 
 /* ICONS FORM */

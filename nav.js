@@ -17,7 +17,7 @@ navToggle.addEventListener('click', () => {
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-        document.getElementById("header").style.backgroundColor = "#7d4427";
+        document.getElementById("header").style.backgroundColor = "#060301"; /* #7d4427 */
     } else {
         document.getElementById("header").style.backgroundColor = "transparent";
 
