@@ -7,7 +7,8 @@ window.addEventListener("resize", () => {
     document.getElementById('header').classList.add("resize-animation-stopper");
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(() => {
-        document.   body.classList.remove("resize-animation-stopper");
+        document.body.classList.remove("resize-animation-stopper");
+        document.getElementById('header').classList.remove("resize-animation-stopper");
     }, 400);
 });
 
@@ -116,19 +117,17 @@ function displayBoxDetails(numberList, numberGroupDetail) {
     var reqSearch = "[id^=" + idSearch + "]";
     var children = document.querySelectorAll(reqSearch);
 
-    //console.log("idSearch = " + idSearch);
-    //console.log('Children length = ' + children.length);
-
     /* Hide all */
     children.forEach( child => {
-        child.style.display = "none";
-        //console.log("child = " + child);
+        //child.style.display = "none"; //Version affichage brut sans transition
+        child.classList.remove("config-box-details-active");
+        child.classList.add("zindex-1"); // For dont detect input below the front
     });
 
     /* Show selection */
-    document.getElementById("list-icon-form-detail-" + numberList + "-" + numberGroupDetail)
-        .style.setProperty('display', 'block');
-
+    var elem = document.getElementById("list-icon-form-detail-" + numberList + "-" + numberGroupDetail);
+    elem.classList.remove("zindex-1");
+    elem.classList.add("config-box-details-active");
 }
 
 function selectCamo(indiceSelected) {
@@ -150,23 +149,25 @@ function addConsommableBoxForm() {
     // sinon afficher tooltips
 
     document.getElementById("button-add-consommable")
-        .style.setProperty('display', 'none');
+        .style.setProperty('max-height', '0');
 
-    document.getElementById("config-box-conso-supplementaire")
-        .style.setProperty('display', 'inherit');
+    var elem = document.getElementById("config-box-conso-supplementaire");
+    elem.classList.remove("zindex-1");
+    elem.classList.add("config-box-supplementaire-active");
 }
 
 function deleteConsommableBoxForm() {
-    var consoSupplementaire = document.querySelector('#config-box-conso-supplementaire');
-    consoSupplementaire.classList.remove('config-box-active');
 
-    /* RADIO CHECKED FALSE SECONDARY CONSUMABLE */
+    /* RADIO CHECKED TO FALSE FOR SECONDARY CONSUMABLE */
     /* CONSUMABLE */
     var childConso = document.querySelector('input[name=conso-2]:checked');
     if(childConso) { childConso.checked = false; }
     /* DETAIL */
     var childConsoDetail = document.querySelector('input[name=conso-2-detail]:checked');
     if(childConsoDetail) { childConsoDetail.checked = false; }
+    /* HIDE CHECKBOX "INCLUE IN SUBSCRIPTION" */
+    var childIncluedSub = document.querySelector('input[name=inclued-in-subscription]');
+    childIncluedSub.checked = false;
 
     /* HIDE ALL SECONDARY ICONS */
     var idSearch = "list-icon-form-detail-2";
@@ -174,21 +175,22 @@ function deleteConsommableBoxForm() {
     var children = document.querySelectorAll(reqSearch);
     /* Hide all */
     children.forEach( child => {
-        child.style.display = "none";
+        child.classList.remove("config-box-details-active");
     });
-
-    /* HIDE CHECKBOX "INCLUE IN SUBSCRIPTION" */
-    var childIncluedSub = document.querySelector('input[name=inclued-in-subscription]');
-    childIncluedSub.checked = false;
-
-    /* SHOW BUTTON "ADD CONSO" */
-    document.getElementById("button-add-consommable")
-        .style.setProperty('display', 'inherit');
 
     /* HIDE BUTTON "DELETE CONSO" */
     document.getElementById("config-box-conso-supplementaire")
-        .style.setProperty('display', 'none');
+        .classList.remove("config-box-supplementaire-active");
+
+    /* SHOW BUTTON "ADD CONSO" */
+    setTimeout(() => {
+        document.getElementById("button-add-consommable")
+            .style.setProperty('max-height', '5rem');
+    }, 500);
 }
+
+// DYNAMIC PRICE
+//TODO
 
 // ----------------------------------------------------------------
 

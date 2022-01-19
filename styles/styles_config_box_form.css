@@ -3,28 +3,19 @@
 .config-box-content {
     position: relative;
     justify-content: center;
-
-    background: url("../pictures/backgrounds/forest_mist_bis.png"); /*linear-gradient(180deg, rgba(0,0,0,0.5) 00px, rgba(255,255,255,0) 26px), linear-gradient(0deg, rgba(0,0,0,0.5) 00px, rgba(255,255,255,0) 26px),*/
-    /*background: linear-gradient(90deg, rgba(141,142,114,1) 0%, rgba(132,133,108,1) 21%, rgba(61,64,59,1) 96%);*/
-
-    /*background: rgb(67,67,67);
-    background: radial-gradient(circle, rgba(67,67,67,1) 0%, rgba(6,3,1,1) 100%);*/
-
-    /*background: rgb(6,3,1);
-    background: linear-gradient(90deg, rgba(6,3,1,1) 0%, rgba(67,67,67,1) 40%, rgba(67,67,67,1) 70%, rgba(6,3,1,1) 100%);*/
-
-    /*background: rgb(153,97,68);
-    background: linear-gradient(90deg, rgba(153,97,68,1) 0%, rgba(90,41,16,1) 100%);
-
-    background-size: cover;
+    background: url("../pictures/backgrounds/forest_mist_bis.png");
+    background-position: center;
     background-repeat: no-repeat;
-    background-position: center;*/
+    background-size: cover;
 }
 
 .config-box-partie-gauche {
     position: relative;
     top: 15%;
     width: 50%;
+    height: auto;
+
+    transition: all 0.5s linear;
 }
 
 .config-box-partie-gauche img {
@@ -32,9 +23,18 @@
 }
 
 .picture-base {
+    width: 100%;
     box-shadow: 0 4px 26px rgba(0, 0, 0, 0.8)  ;
     -webkit-box-shadow: 0 4px 26px rgba(0, 0, 0, 0.8)  ;
     -moz-box-shadow: 0 4px 26px rgba(0, 0, 0, 0.8)  ;
+}
+
+.picture-superieure {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
 }
 
 .config-box-partie-droite {
@@ -51,29 +51,13 @@
     -moz-box-shadow: 0 4px 26px rgba(0, 0, 0, 0.8)  ;
     z-index: 2;
 
-    transition: height 1s linear;
-}
-
-.config-box-partie-droite p {
-    margin: 0;
-}
-
-.config-box-produit-content {
-    padding: 2% 0 5% 0 ;
-}
-
-#config-box-conso-supplementaire {
-    display: none;
-}
-
-@media screen and (max-width: 910px) {
-    
+    transition: all 0.5s linear;
 }
 
 /* ICONS FORM */
 
 .list-icon-form {
-    margin: 15px 20px;
+    margin: 2% 4%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -175,41 +159,113 @@
     background-color: #6c6641;
 }
 
-/* PICTURIES */
-
-.picture-superieure {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 5;
-}
-
 /* HIDDEN PARTS */
 
+.config-box-supplementaire {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.75s ease-in;
+}
+
+.config-box-supplementaire-active {
+    max-height: 1000px;
+    transition: max-height 1.5s ease-out;
+}
+
+#button-add-consommable {
+    max-height: 500px;
+    overflow: hidden;
+    transition: max-height 250ms ease-out;
+}
+
 .config-box-details {
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in;
+}
+
+.config-box-details-active {
+    max-height: 500px;
+    transition: max-height 1s ease-out 500ms;
+}
+
+.zindex-1 input{ /* For dont detect input below the front */
+    z-index: -1;
 }
 
 /* OTHERS */
 
-.link-js {
-    font-size: 0.9em;
-    padding-top: 1rem;
+.config-box-partie-droite .button-primary:hover {
+    background-color: #F8FAFA;
+}
+
+#config-box-camo {
+    margin-top: 2rem;
+}
+
+#config-box-conso-supplementaire {
+    margin-top: -1rem;
+}
+
+.config-box-details .link {
     padding-left: 25px;
-    cursor: pointer;
+}
+
+.link-js {
+    position: relative;
+    font-size: 0.9em;
+    margin-left: 25px;
+    margin-top: 0.5rem;
+    border: none;
+    background: none;
 }
 
 .link-js:hover, .link-js:active {
-    color: #8D8E72;
+    color: var(--main-color);
 }
 
 #text-prix-box-form {
-    font-size: 1.4em;
+    font-size: 1.5em;
     font-weight: bold;
     margin: 0.5em 0;
 }
 
-.text-prix {
-    font-size: 0.5em;
-    font-weight: normal;
+/* RESPONSIVE */
+@media screen and (max-width: 910px) {
+    .config-box-content{
+        flex-direction: column;
+    }
+
+    .config-box-partie-gauche {
+        position: sticky;
+        top: 5rem;
+        width: 90%;
+        max-width: 400px;
+        padding: 0 0 5% 0;
+        z-index: 3;
+    }
+
+    .config-box-partie-droite {
+        width: auto;
+        max-width: 400px;
+        margin: 0 3%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .config-box-content {
+        background: url("../pictures/backgrounds/forest_mist_bis_mobile.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .config-box-partie-droite {
+        padding: 1% 2rem 40px 2rem;
+    }
+
+    .list-icon-form {
+        margin: 4% 4%;
+        justify-content: center;
+    }
 }

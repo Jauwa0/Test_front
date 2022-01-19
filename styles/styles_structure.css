@@ -14,7 +14,7 @@
 
     --font-color: #fff;
 
-    --background-color: #060301;
+    --background-color: #060301; /* #060301 */
 }
 
 html, body {
@@ -74,7 +74,7 @@ ul {
 @media screen and (max-width: 480px){
     h1 {font-size: 2.25rem;}
 
-    h2 {font-size: 1.85em;}
+    h2 {font-size: 1.75em;}
 
     h3 {font-size: 1.25em;}
 
@@ -177,7 +177,7 @@ ul {
         z-index: 1000;
 
         transform: translateX(100%);
-        transition: transform 350ms ease-out;
+        transition: transform 500ms ease-out;
     }
 
     .primary-navigation[data-visible="true"] {
@@ -240,5 +240,55 @@ ul {
 .resize-animation-stopper * {
     transition: none !important;
     animation: none !important;
+}
+
+/* BUTTONS */
+.bloc-button {
+    padding: 0.5em 0 2.5em 0;
+    text-align: center;
+}
+
+.button-primary {
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #8D8E72;
+    border: solid 1px transparent;
+    font-family: "mainFont";
+    font-size: 1rem;
+    color: white;
+    letter-spacing: 0.1em;
+    margin: 1em;
+    padding: 0.75em 1.25em;
+
+    transition: background-color 0.3s linear;
+}
+
+.button-primary:hover {
+    background-color: white;
+    color: #8D8E72;
+    transition: background-color 0.3s linear;
+}
+
+.button-secondary {
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #8D8E72;
+    border: solid 1px transparent;
+    font-family: "mainFont";
+    font-size: 1rem;
+    color: white;
+    letter-spacing: 0.1em;
+    margin: 1em;
+    padding: 0.75em 1.25em;
+
+    transition: background-color 0.3s linear;
+}
+
+.button-secondary:hover {
+    background-color: white;
+    color: #8D8E72;
+    transition: background-color 0.3s linear;
 }
 
