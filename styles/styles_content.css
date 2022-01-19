@@ -254,7 +254,7 @@
     }
 }
 
-/* COLLAPS */
+/* FAQ - COLLAPS */
 .bloc-content-collaps {
     width: min(80%, 1000px); /* prend la valeur la plus petite */
     margin-top: 5vh;
@@ -267,7 +267,7 @@
 }
 
 .collaps {
-    cursor: pointer; /* !!!!!!!!!!!!!!!! */
+    cursor: pointer;
     width: 100%;
     text-align: left;
     color: #fff;
@@ -277,10 +277,15 @@
     padding-left: 25px;
 }
 
+.collaps h3 {
+    padding-right: 2.5rem;
+}
+
 .collaps h3:after {
     content: '\02795'; /* Unicode character for "plus" sign (+) */
     color: #fff;
     float: right;
+    margin-right: -2.5rem;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -308,7 +313,7 @@
     justify-content: center;
     color: #ffffff;
 
-    padding: 2% 0 max(2%, 50px) 0;
+    padding: 2% 5% max(2%, 50px) 5%;
 
     font-size: 90%;
 }
