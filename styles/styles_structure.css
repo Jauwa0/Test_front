@@ -14,7 +14,7 @@
 
     --font-color: #fff;
 
-    --background-color: #060301; /* #060301 */
+    --background-color: #0F0F0F; /* #060301 */
 }
 
 html, body {
@@ -22,6 +22,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -173,7 +174,7 @@ ul {
         inset: 0 0 0 40%;
         flex-direction: column;
         padding: min(30vh, 10rem) 2em;
-        background: rgba(34, 27, 27, 0.95);
+        background: rgba(15, 15, 15, 0.95); /* rgba(34, 27, 27, 0.95) */
         z-index: 1000;
 
         transform: translateX(100%);

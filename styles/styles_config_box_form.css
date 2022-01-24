@@ -237,8 +237,8 @@
     }
 
     .config-box-partie-gauche {
-        position: sticky;
-        top: 5rem;
+        /*position: sticky;
+        top: 5rem;*/
         width: 90%;
         max-width: 400px;
         padding: 0 0 5% 0;
@@ -267,5 +267,6 @@
     .list-icon-form {
         margin: 4% 4%;
         justify-content: center;
+        flex-wrap: nowrap;
     }
 }
